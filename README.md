@@ -15,7 +15,7 @@ click the [Choose File] button, load any file in the data folder.
 `npm install` install all dependancies.
 
 ##development##
-`make serve`  start running the development server
+`make serve`  start running the development server (also run this initially to create the build.)
 `make watch`  start running the file watcher
 
 ##deployment##
