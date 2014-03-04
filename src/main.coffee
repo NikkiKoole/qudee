@@ -35,9 +35,7 @@ init = ->
   gui.addColor(scene, 'areaColor').onChange (value) -> 
     scene.areaContainer.tint = value.replace('#', '0x')
   gui.addColor(scene, 'assetColor').onChange (value) -> 
-    for child in scene.assetContainer.children
-      #child.tint = value#.replace('#', '0x')
-  #loadFloorPlan 'data/RS_Lake.json'
+    scene.tintAssets value
   loadFloorPlan 'data/rijksgebouwendienst.xml'
 
 

@@ -15,16 +15,20 @@ module.exports = class Floorplan extends PIXI.Stage
     @wallContainer.tint = @wallColor.replace('#', '0x')
     @areaContainer = new PIXI.Graphics()
     @areaContainer.tint = @areaColor.replace('#', '0x')
-    @assetContainer = new PIXI.SpriteBatch()
-    @assetContainer.tint = @assetColor.replace('#', '0x')
-    
+    @assetContainer = new PIXI.DisplayObjectContainer()
+    @tintAssets @assetColor
+
     @.addChild @container
     @.addChild @areaContainer
     @.addChild @wallContainer
     @.addChild @assetContainer
     @wallGraph = new WallGraph()
     
-    
+  tintAssets: (tint) ->
+    for child in @assetContainer.children
+      child.tint =  @assetColor.replace('#', '0x')
+      console.log child.tint
+
   destroyData: ->
     @wallGraph = new WallGraph()
     @container.clear()
