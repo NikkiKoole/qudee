@@ -15,8 +15,8 @@ click the [Choose File] button, load any file in the data folder.
 `npm install` install all dependancies.
 
 ##development##
-`make serve`  start running the development server (also run this initially to create the build.)
-`make watch`  start running the file watcher
+`make serve`  start running the development server 
+`make watch`  start running the file watcher (also run this initially to create the build.)
 
 ##deployment##
 `make uglify`  build the minified file at build/bundle.min.js
