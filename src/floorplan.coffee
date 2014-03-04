@@ -61,13 +61,10 @@ module.exports = class Floorplan extends PIXI.Stage
       @lastThickness = thickness
       @wallContainer.lineStyle @lastThickness, 0xffffff
 
-  #area should be input in form 
-  #[{x,y},{x,y}]
   drawArea : (area) ->
     @areaContainer.beginFill 0xffffff
     @areaContainer.lineStyle 0, 0xffffff
     for p in area
       @areaContainer.lineTo(p.x, p.y)
-      #console.log p
     @areaContainer.endFill()
 

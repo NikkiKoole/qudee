@@ -38,7 +38,6 @@ module.exports.loadJSONPAssets = (urlArray) ->
       newdata = maskFlip data.color 
       createImage newdata, url, '.color' 
       sprite =  new PIXI.Sprite.fromImage(url+'.color')
-      #sprite.position.x = Math.random()*800
       scene.assetContainer.addChild(sprite)
       console.log 'data.color'
     if data.over 

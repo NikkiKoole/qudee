@@ -63,7 +63,6 @@ constructFloorplanFromRS = (rs) ->
   query = constructQuery rs.model.components
 
   onRSAssetsLoaded = () =>
-    #console.log PIXI.TextureCache
     for k,v of PIXI.TextureCache
       console.log k,v
       sprite =  new PIXI.Sprite.fromImage(v)
@@ -82,7 +81,7 @@ constructFloorplanFromRS = (rs) ->
   
 
 constructFloorplanFromFML = (fml) ->
-  MULTIPLIER = 100 #to go from FML units to screen units 
+  MULTIPLIER = 100 
   scene = Floorplan.get()
   scene.destroyData()
   root = null

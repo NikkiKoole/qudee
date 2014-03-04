@@ -6,17 +6,16 @@ and qudee was born.
 
 It's a cute, quick and dirty approach of drawing floorplans.
 It handles floorplanner FML files and roomstyler RS files.
-It utilizes [Pixi.js](http://www.pixijs.com/) as its rendering backend
+It utilizes [Pixi.js](http://www.pixijs.com/) as its rendering backend.
 
 ##usage##
-Choose a FML(xml) or RS(json) file with the filepanel (I've put a few files in data/).
-Enjoy the room.
+click the [Choose File] button, load any file in the data folder.
 
 ##install##
 `npm install` install all dependancies.
 
 ##development##
-`make serve`  start running the development server  
+`make serve`  start running the development server
 `make watch`  start running the file watcher
 
 ##deployment##
@@ -29,7 +28,7 @@ Enjoy the room.
 - xml2json.js      // XML Parser (adapted slightly)
 
 ##notes##
-to create the correct FML or RS data for testing purposes you follow a few steps
+to get the correct FML or RS data for testing purposes you follow a few steps.
 
 Floorplanner:
 - login to your floorplanner account
@@ -45,4 +44,4 @@ Roomstyler
 - slice the part up until `room_url=` from that string.
 - final url would become `http://roomstyler.com/3dplanner/rooms/6394523/6409199` 
 
-put the files you get in the data folder, save the floorplanner ones as xml's and the roomstyler ones as json
+Save the file you get in data/ , the floorplanner one as an xml, the roomstyler one as a json.

@@ -37,8 +37,6 @@ init = ->
   gui.addColor(scene, 'assetColor').onChange (value) -> 
     scene.tintAssets value
   loadFloorPlan 'data/rijksgebouwendienst.xml'
-
-
   
   animate = () -> 
     stats.begin()
@@ -47,8 +45,6 @@ init = ->
     stats.end()
 
   requestAnimFrame( animate )
-
-
 
 window.onload = ->
   init()
