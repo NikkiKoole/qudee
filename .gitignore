@@ -1,3 +1,5 @@
 *.html~
 *.coffee~
 Makefile
+*.xml~
+node_modules/
