@@ -4,6 +4,7 @@ Floorplan = require './floorplan'
 handleFileSelect = (event) ->
   loadFloorPlan 'data/' + event.target.files[0].name
 
+
 init = ->
   stats = new Stats()
   stats.setMode(0)
