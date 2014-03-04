@@ -17,7 +17,8 @@ loadAsset = (url, error, succes) ->
 
 module.exports.loadJSONPAssets = (urlArray) ->
   # loads all urls in urlArray sequentially and by waiting for their turn.
- 
+  # there is a big issue with canvas creation hiding in here, I'll need promises to fix it I think.
+  
   url = null  # the current url that's been loaded.
   delay = (ms, func) -> setTimeout func, ms
 
@@ -31,10 +32,7 @@ module.exports.loadJSONPAssets = (urlArray) ->
       sprite =  new PIXI.Sprite.fromImage(url+'.under')
       scene.assetContainer.addChild(sprite)
     if data.color
-      #newdata = data.color #maskFlip data.color 
-      # TODO : this maskFlip function should be finished before continuing.
-      # atm it messes up the dom because it's creating to many canvasses.
-      # i *think* i need some promises to handle it justly
+      #newdata = data.color #use the non changed color shape if maskFlip keeps messing up the DOM
       newdata = maskFlip data.color 
       createImage newdata, url, '.color' 
       sprite =  new PIXI.Sprite.fromImage(url+'.color')
