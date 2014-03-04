@@ -1,0 +1,2576 @@
+<design>
+<id>28523076</id>
+<design-type>save</design-type>
+<name>Gegen Sie einen Namen ein</name>
+<project-id>24738598</project-id>
+<floor-id>27728512</floor-id>
+<version-2d>357</version-2d>
+<version-3d>153</version-3d>
+<units>meters</units>
+<assets type="array">
+<asset id="l14">
+<url2d>linears/2d/2_losse_muur.png</url2d>
+<url3d/>
+<thickness>0.07</thickness>
+<color>#000000</color>
+</asset>
+<asset id="3511">
+<name>Wood Deck</name>
+<url2d>img_2ds/3511/original/terrasplank.png</url2d>
+</asset>
+<asset id="3503">
+<name>Stones</name>
+<url2d>img_2ds/3503/original/stenen.png</url2d>
+</asset>
+<asset id="3499">
+<name>Tiles, irregular</name>
+<url2d>img_2ds/3499/original/NatuursteenWildverband.png</url2d>
+</asset>
+<asset id="988">
+<name>Table, 8 persons</name>
+<url2d>img_2ds/988/flz/tablesq_6ft_8.flz</url2d>
+<url3d>img_3ds/988/bpod/v97_tablesqx6ftx8.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="602">
+<name>Rug</name>
+<url2d>img_2ds/602/flz/williammorris.flz</url2d>
+<url3d>img_3ds/602/bpod/v667_williammorris.bpod</url3d>
+<layer>2</layer>
+<filter-value/>
+</asset>
+<asset id="1302">
+<name>Storage Cabinet</name>
+<url2d>img_2ds/1302/flz/v62_bestaxopbergcombi6.flz</url2d>
+<url3d>img_3ds/1302/bpod/v773_bestaxopbergcombi6.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="142">
+<name>Play Refrigerator</name>
+<url2d>img_2ds/142/flz/playrefridgerator.flz</url2d>
+<url3d>img_3ds/142/bpod/playrefridgerator.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="372">
+<name>Bookcase</name>
+<url2d>img_2ds/372/flz/boekenkast.flz</url2d>
+<url3d/>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="200">
+<name>Standard door</name>
+<url2d>img_2ds/200/flz/LeftTop.flz</url2d>
+<url3d>img_3ds/200/bpod/StandardDoor.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="689">
+<name>Patio Dining Set 6 pers</name>
+<url2d>img_2ds/689/flz/patiodining.flz</url2d>
+<url3d>img_3ds/689/bpod/patiodining.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="216">
+<name>Pocket door</name>
+<url2d>img_2ds/216/flz/PocketDoorPure.flz</url2d>
+<url3d>img_3ds/216/bpod/PocketDoor.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="3825">
+<name>Umbrella Plant</name>
+<url2d>img_2ds/3825/flz/ParapluplantInpot.flz</url2d>
+<url3d>img_3ds/3825/bpod/ParapluplantInPot.bpod</url3d>
+<layer>8</layer>
+<filter-value>DropShadow{4,45,0×000000,.6,16,16,1,1,0,0,0}</filter-value>
+</asset>
+<asset id="869">
+<name>Washing Machine</name>
+<url2d>img_2ds/869/flz/wasmachine.flz</url2d>
+<url3d>img_3ds/869/bpod/wasmachine.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="5191">
+<name>Garage door</name>
+<url2d>img_2ds/5191/flz/GarageDoorWithDoor.flz</url2d>
+<url3d>img_3ds/5191/bpod/GarageDoorWithDoor2.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="222">
+<name>Entryway</name>
+<url2d>img_2ds/222/flz/Entryway.flz</url2d>
+<url3d>img_3ds/222/bpod/Entryway2.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="4400">
+<name>Bathroom radiator</name>
+<url2d>img_2ds/4400/flz/BathroomRadiator01b.flz</url2d>
+<url3d>img_3ds/4400/bpod/BathroomRadiator01.bpod</url3d>
+<layer>4</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="52">
+<name>Stairs</name>
+<url2d>img_2ds/52/flz/trap_4treden.flz</url2d>
+<url3d>img_3ds/52/bpod/v958_trap4treden.bpod</url3d>
+<layer>4</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="208">
+<name>French doors</name>
+<url2d>img_2ds/208/flz/FrenchdoorModern.flz</url2d>
+<url3d>img_3ds/208/bpod/FrenchDoorsModern.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="872">
+<name>Piano</name>
+<url2d>img_2ds/872/flz/piano.flz</url2d>
+<url3d>img_3ds/872/bpod/piano.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="308">
+<name>Chair</name>
+<url2d>img_2ds/308/flz/kuipstoel.flz</url2d>
+<url3d>img_3ds/308/bpod/kuipstoel.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="496">
+<name>Sink</name>
+<url2d>img_2ds/496/flz/spoelbak.flz</url2d>
+<url3d>img_3ds/496/bpod/v137_spoelbak.bpod</url3d>
+<layer>12</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="4442">
+<name>Ceramic cooker</name>
+<url2d>img_2ds/4442/flz/keramiek2.flz</url2d>
+<url3d>img_3ds/4442/bpod/v820_keramiek.bpod</url3d>
+<layer>12</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="502">
+<name>Worktop, Stone</name>
+<url2d>img_2ds/502/flz/keu_st60x60.flz</url2d>
+<url3d>img_3ds/502/bpod/keu_st60x60.bpod</url3d>
+<layer>8</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="267">
+<name>Sofa, Triple Seat</name>
+<url2d>img_2ds/267/flz/bankstel10.flz</url2d>
+<url3d>img_3ds/267/bpod/redSofa2.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="516">
+<name>Worktop, Stainless Steel</name>
+<url2d>img_2ds/516/flz/keu_RVS120x120.flz</url2d>
+<url3d>img_3ds/516/bpod/keu_RVS120x120.bpod</url3d>
+<layer>8</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="984">
+<name>Table, 8 persons</name>
+<url2d>img_2ds/984/flz/tablesq_48inch_8.flz</url2d>
+<url3d>img_3ds/984/bpod/v929_tablesqx48inchx8.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="1303">
+<name>Storage Cabinet</name>
+<url2d>img_2ds/1303/flz/v774_bestaxopbergcombi7.flz</url2d>
+<url3d>img_3ds/1303/bpod/v564_bestaxopbergcombi7.bpod</url3d>
+<layer>10</layer>
+<filter-value/>
+</asset>
+<asset id="4601">
+<name>Armchair</name>
+<url2d>img_2ds/4601/flz/fauteuil06.flz</url2d>
+<url3d>img_3ds/4601/bpod/v858_fauteuil6.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="3784">
+<name>Lichtenstein Painting</name>
+<url2d>img_2ds/3784/flz/PaintingFrame120cm_strak.flz</url2d>
+<url3d>img_3ds/3784/bpod/RoyLiechtensteinInthecar2.bpod</url3d>
+<layer>12</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="785">
+<name>Flat TV</name>
+<url2d>img_2ds/785/flz/Plasmascreen3.flz</url2d>
+<url3d>img_3ds/785/bpod/v899_plasmascreen3.bpod</url3d>
+<layer>12</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="54">
+<name>Stairs</name>
+<url2d>img_2ds/54/flz/trap_rechtpuur.flz</url2d>
+<url3d>img_3ds/54/bpod/trap_recht.bpod</url3d>
+<layer>4</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="1675">
+<name>Large Storage Cabinet</name>
+<url2d>img_2ds/1675/flz/v950_storagecupboard.flz</url2d>
+<url3d>img_3ds/1675/bpod/v310_storagecabinet.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="561">
+<name>Wash-basin</name>
+<url2d>img_2ds/561/flz/wasbakdubbel.flz</url2d>
+<url3d>img_3ds/561/bpod/wasbakdubbel.bpod</url3d>
+<layer>12</layer>
+<filter-value>DropShadow{4,45,0×000000,.6,12,12,1,1,0,0,0}</filter-value>
+</asset>
+<asset id="96">
+<name>Shower</name>
+<url2d>img_2ds/96/flz/douche.flz</url2d>
+<url3d>img_3ds/96/bpod/douchevierkant2.bpod</url3d>
+<layer>4</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="542">
+<name>Cabinet High</name>
+<url2d>img_2ds/542/flz/v47_keukasthoog.flz</url2d>
+<url3d>img_3ds/542/bpod/v168_keukenkasthoog.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="4076">
+<name>Classic door</name>
+<url2d>img_2ds/4076/flz/LeftTop.flz</url2d>
+<url3d>img_3ds/4076/bpod/FrenchDoor2.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="3755">
+<name>Classic window</name>
+<url2d>img_2ds/3755/flz/SegmentedWindow.flz</url2d>
+<url3d>img_3ds/3755/bpod/SegmentedWindow01.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="206">
+<name>Door</name>
+<url2d>img_2ds/206/flz/DeurMetStreepje.flz</url2d>
+<url3d>img_3ds/206/bpod/StandardDoor.bpod</url3d>
+<layer>3</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="224">
+<name>Glass wall</name>
+<url2d>img_2ds/224/flz/GlassWall.flz</url2d>
+<url3d>img_3ds/224/bpod/GlassWall.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="748">
+<name>Swimming pool</name>
+<url2d>img_2ds/748/flz/zwembad01.flz</url2d>
+<url3d>img_3ds/748/bpod/zwembad01j.bpod</url3d>
+<layer>2</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="391">
+<name>Maui 2-Seater</name>
+<url2d>img_2ds/391/flz/v176_mauix5281.flz</url2d>
+<url3d>img_3ds/391/bpod/v20_mauix25zitsbank.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="316">
+<name>Office Chair</name>
+<url2d>img_2ds/316/flz/swivelofficechair.flz</url2d>
+<url3d>img_3ds/316/bpod/v803_swivelofficechair.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="342">
+<name>Desk</name>
+<url2d>img_2ds/342/flz/buro_150x80.flz</url2d>
+<url3d>img_3ds/342/bpod/v892_buro_150x80.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="446">
+<name>Bed</name>
+<url2d>img_2ds/446/flz/v803_birkeland.flz</url2d>
+<url3d>img_3ds/446/bpod/v87_birkeland.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="3276">
+<name>Lower Sauna Bench</name>
+<url2d>img_2ds/3276/flz/v611_lowsaunabench120x50.flz</url2d>
+<url3d>img_3ds/3276/bpod/v977_lowsaunabench120x50.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="4028">
+<name>Shower</name>
+<url2d>img_2ds/4028/flz/LosseDouchekop2.flz</url2d>
+<url3d>img_3ds/4028/bpod/LosseDouchkop.bpod</url3d>
+<layer>12</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="556">
+<name>Toilet</name>
+<url2d>img_2ds/556/flz/toilethang.flz</url2d>
+<url3d>img_3ds/556/bpod/toilethang.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="3275">
+<name>Double Sauna Bench</name>
+<url2d>img_2ds/3275/flz/v700_doublesaunabench120x80.flz</url2d>
+<url3d>
+img_3ds/3275/bpod/v939_doublesaunabenches120x80.bpod
+</url3d>
+<layer>4</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="3278">
+<name>Sauna Heater</name>
+<url2d>img_2ds/3278/flz/v948_saunaheater.flz</url2d>
+<url3d>img_3ds/3278/bpod/v826_saunaheater.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="202">
+<name>Glass door</name>
+<url2d>img_2ds/202/flz/GlassDoor.flz</url2d>
+<url3d>img_3ds/202/bpod/GlassDoor.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="726">
+<name>Lantern</name>
+<url2d>img_2ds/726/flz/lantaarn01.flz</url2d>
+<url3d>img_3ds/726/bpod/lantaarn01.bpod</url3d>
+<layer>12</layer>
+<filter-value/>
+</asset>
+<asset id="701">
+<name>Pergola</name>
+<url2d>img_2ds/701/flz/Pergola450x300.flz</url2d>
+<url3d>img_3ds/701/bpod/Pergola450x300.bpod</url3d>
+<layer>12</layer>
+<filter-value/>
+</asset>
+<asset id="685">
+<name>Table</name>
+<url2d>img_2ds/685/flz/v644_tablexdarwin.flz</url2d>
+<url3d>img_3ds/685/bpod/v572_mobelextable.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="680">
+<name>Chair</name>
+<url2d>img_2ds/680/flz/v383_chairxdarwin.flz</url2d>
+<url3d>img_3ds/680/bpod/v477_mobelgxcha.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="922">
+<name>BMW</name>
+<url2d>img_2ds/922/flz/bmw.flz</url2d>
+<url3d>img_3ds/922/bpod/bmw2.bpod</url3d>
+<layer>1</layer>
+<filter-value>4</filter-value>
+</asset>
+<asset id="647">
+<name>Roses Climbing</name>
+<url2d>img_2ds/647/flz/v890_rosesclimbing01.flz</url2d>
+<url3d>img_3ds/647/bpod/v752_rosesclimbing01.bpod</url3d>
+<layer>12</layer>
+<filter-value/>
+</asset>
+<asset id="758">
+<name>Stone Wall</name>
+<url2d>img_2ds/758/flz/v457_stonewall.flz</url2d>
+<url3d>img_3ds/758/bpod/v692_stoenwall01.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="746">
+<name>Fountain</name>
+<url2d>img_2ds/746/flz/v296_fontein02.flz</url2d>
+<url3d>img_3ds/746/bpod/Fontein02.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="654">
+<name>Hedge</name>
+<url2d>img_2ds/654/flz/Hedge01.flz</url2d>
+<url3d>img_3ds/654/bpod/Liguster50x50.bpod</url3d>
+<layer>12</layer>
+<filter-value/>
+</asset>
+<asset id="640">
+<name>Thuja Occidentalis</name>
+<url2d>img_2ds/640/flz/v99_thujacolumn.flz</url2d>
+<url3d>img_3ds/640/bpod/v371_thujacolumn01.bpod</url3d>
+<layer>12</layer>
+<filter-value/>
+</asset>
+<asset id="1135">
+<name>Man Sitting</name>
+<url2d>img_2ds/1135/flz/v298_mansitting04.flz</url2d>
+<url3d>img_3ds/1135/bpod/v846_manzittend05.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="3831">
+<name>Bamboo</name>
+<url2d>img_2ds/3831/flz/Bamboo.flz</url2d>
+<url3d>img_3ds/3831/bpod/BambooInPot.bpod</url3d>
+<layer>8</layer>
+<filter-value>DropShadow{4,45,0×000000,.6,16,16,1,1,0,0,0}</filter-value>
+</asset>
+<asset id="3775">
+<name>Kentia Palm</name>
+<url2d>img_2ds/3775/flz/KentiaPalm01.flz</url2d>
+<url3d>img_3ds/3775/bpod/KentiaPalmFixed.bpod</url3d>
+<layer>12</layer>
+<filter-value/>
+</asset>
+<asset id="219">
+<name>Two pane window</name>
+<url2d>img_2ds/219/flz/v559_2panewindow.flz</url2d>
+<url3d>img_3ds/219/bpod/TwoPaneWindow.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="220">
+<name>Three pane window</name>
+<url2d>img_2ds/220/flz/3PaneWindow.flz</url2d>
+<url3d>img_3ds/220/bpod/ThreePaneWindow.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="809">
+<name>Desk</name>
+<url2d>img_2ds/809/flz/v883_bureau2x160x80.flz</url2d>
+<url3d>img_3ds/809/bpod/v941_buro2x160x80.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="1412">
+<name>Leap Worklounge - (Standard Lead Time)</name>
+<url2d>img_2ds/1412/flz/leap_lounge.flz</url2d>
+<url3d>img_3ds/1412/bpod/leap_lounge.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="716">
+<name>Gass grill</name>
+<url2d>
+img_2ds/716/flz/v951_gassxxxxgrillxcnxonnoisseur.flz
+</url2d>
+<url3d>img_3ds/716/bpod/v779_gassgrxconnoisseur.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="601">
+<name>rug</name>
+<url2d>img_2ds/601/flz/tabriznavy.flz</url2d>
+<url3d>img_3ds/601/bpod/v178_tabriznavy.bpod</url3d>
+<layer>2</layer>
+<filter-value/>
+</asset>
+<asset id="3760">
+<name>Classic window</name>
+<url2d>img_2ds/3760/flz/Window9Segments.flz</url2d>
+<url3d>img_3ds/3760/bpod/Window9segments.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="3735">
+<name>Horizontal espalier</name>
+<url2d>img_2ds/3735/flz/Dakplataan01b.flz</url2d>
+<url3d>img_3ds/3735/bpod/Dakboom01b.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="1243">
+<name>Picea</name>
+<url2d>img_2ds/1243/flz/v515_conifertreexopen01.flz</url2d>
+<url3d>img_3ds/1243/bpod/Picea01d.bpod</url3d>
+<layer>12</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="696">
+<name>Parasol</name>
+<url2d>img_2ds/696/flz/parasol1.flz</url2d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="759">
+<name>Chaise Lounge</name>
+<url2d>img_2ds/759/flz/chaise_lounge.flz</url2d>
+<url3d>img_3ds/759/bpod/chaise_lounge.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="562">
+<name>Wash-basin</name>
+<url2d>img_2ds/562/flz/wasbaksq.flz</url2d>
+<url3d>img_3ds/562/bpod/wasbaksq.bpod</url3d>
+<layer>12</layer>
+<filter-value>DropShadow{4,45,0×000000,.6,12,12,1,1,0,0,0}</filter-value>
+</asset>
+<asset id="209">
+<name>French doors</name>
+<url2d>img_2ds/209/flz/FrenchDoorsTop.flz</url2d>
+<url3d>img_3ds/209/bpod/FrenchDoorsClassic.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="3756">
+<name>Classic window</name>
+<url2d>img_2ds/3756/flz/SegmentedWindow.flz</url2d>
+<url3d>img_3ds/3756/bpod/SegmentedWindow02.bpod</url3d>
+<layer>16</layer>
+<filter-value/>
+</asset>
+<asset id="3988">
+<name>Fireplace</name>
+<url2d>img_2ds/3988/flz/SchouwModern03.flz</url2d>
+<url3d>img_3ds/3988/bpod/SchouwModern03d.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="1298">
+<name>Storage Cabinet</name>
+<url2d>img_2ds/1298/flz/v395_bestaxopbergcombi2.flz</url2d>
+<url3d>img_3ds/1298/bpod/v726_bestaxopbergcombi2.bpod</url3d>
+<layer>8</layer>
+<filter-value/>
+</asset>
+<asset id="93">
+<name>Square column</name>
+<url2d>img_2ds/93/flz/4kant.flz</url2d>
+<url3d>img_3ds/93/bpod/4kant.bpod</url3d>
+<layer>4</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="97">
+<name>Toilet</name>
+<url2d>img_2ds/97/flz/toilet.flz</url2d>
+<url3d>img_3ds/97/bpod/toilet.bpod</url3d>
+<layer>4</layer>
+<filter-value/>
+</asset>
+<asset id="3255">
+<name>Stairs</name>
+<url2d>img_2ds/3255/flz/v745_trap90graden.flz</url2d>
+<url3d>img_3ds/3255/bpod/v309_trapx90xhoek.bpod</url3d>
+<layer>4</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="53">
+<name>Stairs</name>
+<url2d>img_2ds/53/flz/trap_7tredenpuur.flz</url2d>
+<url3d>img_3ds/53/bpod/v734_trapx7treden.bpod</url3d>
+<layer>4</layer>
+<filter-value>null</filter-value>
+</asset>
+<asset id="e942">
+<name>Two pane window</name>
+<url2d>elements/2d/openings/windows/2PaneWindow.swf</url2d>
+<layer>16</layer>
+</asset>
+<asset id="e920">
+<name>Standard door</name>
+<url2d>elements/2d/openings/doors/StandardDoor.swf</url2d>
+<layer>16</layer>
+</asset>
+</assets>
+<objects type="array">
+<object>
+<asset refid="e920"/>
+<type>door</type>
+<points>-4.63 9.25 0</points>
+<size>0.84 0.161 2.2</size>
+<mirrored>1 0 0</mirrored>
+</object>
+<object>
+<asset refid="e920"/>
+<type>door</type>
+<points>-4.67 10.4 0</points>
+<size>0.89 0.152 2.2</size>
+<mirrored>1 1 0</mirrored>
+</object>
+<object>
+<asset refid="e942"/>
+<type>window</type>
+<points>-4.12 11.97 1.4</points>
+<size>0.5 0.15 0.7</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="53"/>
+<type>furniture</type>
+<points>-6.36 9.85 0</points>
+<size>1 2.32 0.3</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="3255"/>
+<type>furniture</type>
+<points>-8.03 9.87 0</points>
+<size>1.15 1.21 0</size>
+<rotation>0 0 -3870</rotation>
+<mirrored>1 0 0</mirrored>
+</object>
+<object>
+<asset refid="53"/>
+<type>furniture</type>
+<points>-8.03 10.9 0</points>
+<size>1.17 1.07 0</size>
+<rotation>0 0 -360</rotation>
+</object>
+<object>
+<asset refid="3255"/>
+<type>furniture</type>
+<points>-8.06 11.82 0</points>
+<size>1.17 0.88 0</size>
+<rotation>0 0 -360</rotation>
+<mirrored>1 0 0</mirrored>
+</object>
+<object>
+<asset refid="97"/>
+<type>furniture</type>
+<points>-4.74 11.89 0</points>
+<size>0.6 0.8 0</size>
+<rotation>0 0 -180</rotation>
+</object>
+<object>
+<asset refid="93"/>
+<type>furniture</type>
+<points>0.46 4.85 0</points>
+<size>0.25 0.25 0</size>
+<rotation>0 0 -180</rotation>
+<color>#dfdfdf</color>
+</object>
+<object>
+<asset refid="93"/>
+<type>furniture</type>
+<points>0.43 0.02 0</points>
+<size>0.25 0.25 0</size>
+<rotation>0 0 -180</rotation>
+<color>#e1e1e1</color>
+</object>
+<object>
+<asset refid="1298"/>
+<type>furniture</type>
+<points>7.26 -10.12 0</points>
+<size>2.41 0.41 0.8</size>
+<rotation>0 0 1528.74</rotation>
+<color>#392300</color>
+</object>
+<object>
+<asset refid="3988"/>
+<type>furniture</type>
+<points>-2.76 3.55 0</points>
+<size>0.95 2.33 0</size>
+<rotation>0 0 180</rotation>
+<color>#cccccc</color>
+</object>
+<object>
+<asset refid="3756"/>
+<type>window</type>
+<points>3.88 11 0.65</points>
+<size>1.2 0.25 1.6</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="209"/>
+<type>door</type>
+<points>-1.91 -9.51 0</points>
+<size>3.01 0.085 2.2</size>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="562"/>
+<type>furniture</type>
+<points>-5.83 12.03 0</points>
+<size>0.7 0.5 0</size>
+<rotation>0 0 -180</rotation>
+</object>
+<object>
+<asset refid="759"/>
+<type>furniture</type>
+<points>-6.48 -12.14 0</points>
+<size>1.89 0.68 0</size>
+<rotation>0 0 135</rotation>
+</object>
+<object>
+<asset refid="696"/>
+<type>furniture</type>
+<points>-5.97 -11.46 0</points>
+<size>1.64 1.56 0</size>
+</object>
+<object>
+<asset refid="1243"/>
+<type>furniture</type>
+<points>9.35 -8.93 0</points>
+<size>2.06 2 0</size>
+</object>
+<object>
+<asset refid="3735"/>
+<type>furniture</type>
+<points>1.45 -10.1 0</points>
+<size>0.9 0.9 0</size>
+</object>
+<object>
+<asset refid="3760"/>
+<type>window</type>
+<points>4.29 -1.67 0.7</points>
+<size>2.8 0.25 1.6</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="601"/>
+<type>furniture</type>
+<points>1.792 2.59 0</points>
+<size>2.9 3.9 0</size>
+<rotation>0 0 -720</rotation>
+</object>
+<object>
+<asset refid="716"/>
+<type>furniture</type>
+<points>-2.72 -3.76 0</points>
+<size>1.39 0.53 0</size>
+<rotation>0 0 180</rotation>
+</object>
+<object>
+<asset refid="1412"/>
+<type>furniture</type>
+<points>6.45 -9.78 0</points>
+<size>0.8 0.68 0</size>
+<rotation>0 0 32.85</rotation>
+</object>
+<object>
+<asset refid="809"/>
+<type>furniture</type>
+<points>5.22 -9.59 0</points>
+<size>1.6 1 0</size>
+<rotation>0 0 989.79</rotation>
+</object>
+<object>
+<asset refid="220"/>
+<type>window</type>
+<points>5.79 -11.14 0.65</points>
+<size>2 0.25 1.6</size>
+<rotation>0 0 164.97</rotation>
+</object>
+<object>
+<asset refid="219"/>
+<type>window</type>
+<points>-4.45 -9.51 0.4</points>
+<size>1.65 0.15 1.8</size>
+</object>
+<object>
+<asset refid="219"/>
+<type>window</type>
+<points>-5.37 -8.68 0.4</points>
+<size>1.4 0.15 1.8</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="3775"/>
+<type>furniture</type>
+<points>-4.53 -8.72 0</points>
+<size>1.418 1.431 0</size>
+<rotation>0 0 98.86</rotation>
+</object>
+<object>
+<asset refid="3831"/>
+<type>furniture</type>
+<points>2.46 -7.53 0</points>
+<size>0.59 0.52 0</size>
+</object>
+<object>
+<asset refid="1135"/>
+<type>furniture</type>
+<points>-4.67 11.72 0</points>
+<size>0.69 0.73 0</size>
+<rotation>0 0 179.97</rotation>
+</object>
+<object>
+<asset refid="640"/>
+<type>furniture</type>
+<points>5.81 14.25 0</points>
+<size>2.28 2.25 0</size>
+</object>
+<object>
+<asset refid="640"/>
+<type>furniture</type>
+<points>6.83 15.01 0</points>
+<size>2.28 2.25 0</size>
+</object>
+<object>
+<asset refid="654"/>
+<type>furniture</type>
+<points>6.33 16.51 0</points>
+<size>5.28 0.7 0</size>
+<rotation>0 0 -6.17</rotation>
+</object>
+<object>
+<asset refid="746"/>
+<type>furniture</type>
+<points>19.61 -14.5 0</points>
+<size>1.201 1.221 0</size>
+</object>
+<object>
+<asset refid="758"/>
+<type>furniture</type>
+<points>6.97 6.77 0</points>
+<size>1.76 0.77 0</size>
+</object>
+<object>
+<asset refid="758"/>
+<type>furniture</type>
+<points>9.3 6.76 0</points>
+<size>2.93 0.821 0</size>
+<rotation>0 0 1800</rotation>
+</object>
+<object>
+<asset refid="647"/>
+<type>furniture</type>
+<points>7.63 0.92 0</points>
+<size>1.7 0.801 0</size>
+<rotation>0 0 101.44</rotation>
+</object>
+<object>
+<asset refid="922"/>
+<type>furniture</type>
+<points>10.37 13.56 0</points>
+<size>2 4.7 0</size>
+</object>
+<object>
+<asset refid="922"/>
+<type>furniture</type>
+<points>-7.67 15.17 0</points>
+<size>2 4.7 0</size>
+</object>
+<object>
+<asset refid="680"/>
+<type>furniture</type>
+<points>-7.86 -7.26 0</points>
+<size>0.67 0.82 0</size>
+</object>
+<object>
+<asset refid="680"/>
+<type>furniture</type>
+<points>-6.6 -5.56 0</points>
+<size>0.67 0.82 0</size>
+<rotation>0 0 89.97</rotation>
+</object>
+<object>
+<asset refid="680"/>
+<type>furniture</type>
+<points>-8.53 -6.13 0</points>
+<size>0.67 0.82 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="680"/>
+<type>furniture</type>
+<points>-7.866 -5.077 0</points>
+<size>0.67 0.82 0</size>
+<rotation>0 0 -180</rotation>
+</object>
+<object>
+<asset refid="685"/>
+<type>furniture</type>
+<points>-7.22 -6.21 0</points>
+<size>0.52 0.52 0</size>
+</object>
+<object>
+<asset refid="701"/>
+<type>furniture</type>
+<points>9.38 1.05 0</points>
+<size>4.51 2.37 0</size>
+</object>
+<object>
+<asset refid="701"/>
+<type>furniture</type>
+<points>10.09 10.2 0</points>
+<size>2.211 4.16 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="701"/>
+<type>furniture</type>
+<points>-7.455 -5.621 0</points>
+<size>3.84 3.01 0</size>
+</object>
+<object>
+<asset refid="1243"/>
+<type>furniture</type>
+<points>9.35 -10.02 0</points>
+<size>2.06 2 0</size>
+</object>
+<object>
+<asset refid="1243"/>
+<type>furniture</type>
+<points>10.18 -9.29 0</points>
+<size>2.06 2 0</size>
+</object>
+<object>
+<asset refid="726"/>
+<type>furniture</type>
+<points>3.61 16.81 0</points>
+<size>0.36 0.36 0</size>
+</object>
+<object>
+<asset refid="726"/>
+<type>furniture</type>
+<points>9.07 16.17 0</points>
+<size>0.36 0.36 0</size>
+</object>
+<object>
+<asset refid="209"/>
+<type>door</type>
+<points>-3.97 -19.17 0</points>
+<size>2.01 0.212 2.2</size>
+</object>
+<object>
+<asset refid="202"/>
+<type>door</type>
+<points>-2.616 -21.914 0</points>
+<size>1 0.225 2.2</size>
+<rotation>0 0 16.67</rotation>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="202"/>
+<type>door</type>
+<points>-4.63 -22.17 0</points>
+<size>1 0.225 2.2</size>
+</object>
+<object>
+<asset refid="3278"/>
+<type>furniture</type>
+<points>-1.04 -21.97 0</points>
+<size>1.16 0.47 0</size>
+</object>
+<object>
+<asset refid="3275"/>
+<type>furniture</type>
+<points>-1.112 -23.486 0</points>
+<size>4.399 0.916 0</size>
+</object>
+<object>
+<asset refid="3275"/>
+<type>furniture</type>
+<points>0.558 -22.438 0</points>
+<size>1.22 1.03 0</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="556"/>
+<type>furniture</type>
+<points>-7.53 -23.73 0</points>
+<size>0.5 0.5 0</size>
+<rotation>0 0 360</rotation>
+</object>
+<object>
+<asset refid="562"/>
+<type>furniture</type>
+<points>-6.077 -21.005 0</points>
+<size>0.63 0.4 0</size>
+<rotation>0 0 4859.12</rotation>
+</object>
+<object>
+<asset refid="4028"/>
+<type>furniture</type>
+<points>-5.64 -22.92 0</points>
+<size>0.21 0.29 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="3276"/>
+<type>furniture</type>
+<points>-4.379 -23.723 0</points>
+<size>1.757 0.574 0</size>
+</object>
+<object>
+<asset refid="3276"/>
+<type>furniture</type>
+<points>-3.794 -22.852 0</points>
+<size>1.155 0.562 0</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="446"/>
+<type>furniture</type>
+<points>-7.08 8.12 0</points>
+<size>1.8 2.1 0</size>
+<rotation>0 0 -900</rotation>
+<color>#ffffff</color>
+</object>
+<object>
+<asset refid="93"/>
+<type>furniture</type>
+<points>-5.27 0.09 0</points>
+<size>0.25 0.25 0</size>
+<rotation>0 0 -180</rotation>
+<color>#dfdfdf</color>
+</object>
+<object>
+<asset refid="342"/>
+<type>furniture</type>
+<points>3.42 7.65 0</points>
+<size>1.42 0.63 0</size>
+<rotation>0 0 -629.99</rotation>
+</object>
+<object>
+<asset refid="316"/>
+<type>furniture</type>
+<points>2.77 7.53 0</points>
+<size>0.59 0.57 0</size>
+<rotation>0 0 89.71</rotation>
+</object>
+<object>
+<asset refid="391"/>
+<type>furniture</type>
+<points>2.62 -8.91 0</points>
+<size>2.15 0.91 0</size>
+<rotation>0 0 5310</rotation>
+<color>#cccccc</color>
+</object>
+<object>
+<asset refid="748"/>
+<type>furniture</type>
+<points>-1.89 -14.23 0</points>
+<size>7 3 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="922"/>
+<type>furniture</type>
+<points>12.99 13.21 0</points>
+<size>2 4.7 0</size>
+</object>
+<object>
+<asset refid="224"/>
+<type>window</type>
+<points>-0.831 -21.7 0.8</points>
+<size>1.85 0.25 1.5</size>
+</object>
+<object>
+<asset refid="759"/>
+<type>furniture</type>
+<points>-1.37 -20.42 0</points>
+<size>1.89 0.68 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="759"/>
+<type>furniture</type>
+<points>-0.52 -20.43 0</points>
+<size>1.89 0.68 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="759"/>
+<type>furniture</type>
+<points>0.37 -20.45 0</points>
+<size>1.89 0.68 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="759"/>
+<type>furniture</type>
+<points>-2.276 -20.45 0</points>
+<size>1.89 0.68 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="206"/>
+<type>door</type>
+<points>-7.377 -20.71 0</points>
+<size>0.9 0.25 2.2</size>
+</object>
+<object>
+<asset refid="3755"/>
+<type>window</type>
+<points>-2.51 11.68 0.65</points>
+<size>2 0.15 1.6</size>
+</object>
+<object>
+<asset refid="4076"/>
+<type>door</type>
+<points>3.95 5.41 0</points>
+<size>0.9 0.25 2.2</size>
+<rotation>0 0 90.99</rotation>
+<mirrored>1 1 0</mirrored>
+</object>
+<object>
+<asset refid="542"/>
+<type>furniture</type>
+<points>-3.82 -2.85 0</points>
+<size>2.89 0.7 0</size>
+<rotation>0 0 3600</rotation>
+</object>
+<object>
+<asset refid="3756"/>
+<type>window</type>
+<points>3.91 7.49 0.65</points>
+<size>1.2 0.25 1.6</size>
+<rotation>0 0 90.99</rotation>
+</object>
+<object>
+<asset refid="209"/>
+<type>door</type>
+<points>-2.59 11.68 0</points>
+<size>1.709 0.15 2.2</size>
+</object>
+<object>
+<asset refid="96"/>
+<type>furniture</type>
+<points>-9.43 9.76 0</points>
+<size>0.79 1.01 0</size>
+<rotation>0 0 4410</rotation>
+</object>
+<object>
+<asset refid="561"/>
+<type>furniture</type>
+<points>-9.18 8.64 0</points>
+<size>1 0.45 0</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="e920"/>
+<type>door</type>
+<points>0.97 7.71 0</points>
+<size>1.04 0.13 2.2</size>
+<rotation>0 0 90</rotation>
+<mirrored>1 0 0</mirrored>
+</object>
+<object>
+<asset refid="1675"/>
+<type>furniture</type>
+<points>2.31 9.65 0</points>
+<size>2.9 0.61 0</size>
+</object>
+<object>
+<asset refid="1675"/>
+<type>furniture</type>
+<points>1.49 11.88 0</points>
+<size>4.46 0.66 0</size>
+<rotation>0 0 180</rotation>
+</object>
+<object>
+<asset refid="54"/>
+<type>furniture</type>
+<points>-3.73 3.08 0</points>
+<size>0.92 3.25 0</size>
+<rotation>0 0 -180</rotation>
+</object>
+<object>
+<asset refid="785"/>
+<type>furniture</type>
+<points>4.31 2.39 0</points>
+<size>1.25 0.25 0</size>
+<rotation>0 0 -270</rotation>
+</object>
+<object>
+<asset refid="3784"/>
+<type>furniture</type>
+<points>-2.11 9.06 1</points>
+<size>1.14 0.06 1.5</size>
+<rotation>0 0 -5400</rotation>
+</object>
+<object>
+<asset refid="4601"/>
+<type>furniture</type>
+<points>3.11 10.8 0</points>
+<size>0.9 0.8 0</size>
+<rotation>0 0 73.73</rotation>
+</object>
+<object>
+<asset refid="1303"/>
+<type>furniture</type>
+<points>-9.23 2.42 0</points>
+<size>2.41 0.44 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="984"/>
+<type>furniture</type>
+<points>-6.98 2.73 0</points>
+<size>3 3 0</size>
+<color>#8f5902</color>
+</object>
+<object>
+<asset refid="1675"/>
+<type>furniture</type>
+<points>2.38 6.5 0</points>
+<size>2.74 0.61 0</size>
+</object>
+<object>
+<asset refid="209"/>
+<type>door</type>
+<points>-6.89 -4.04 0</points>
+<size>2.46 0.104 2.2</size>
+</object>
+<object>
+<asset refid="220"/>
+<type>window</type>
+<points>4.87 -6.5 0.65</points>
+<size>1.2 0.25 1.6</size>
+<rotation>0 0 165.15</rotation>
+</object>
+<object>
+<asset refid="220"/>
+<type>window</type>
+<points>7.68 -8.3 0.65</points>
+<size>1.2 0.25 1.6</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="516"/>
+<type>furniture</type>
+<points>0.056 -3.834 0</points>
+<size>0.55 2.01 0</size>
+<rotation>0 0 3870</rotation>
+</object>
+<object>
+<asset refid="267"/>
+<type>furniture</type>
+<points>2.082 1.116 0</points>
+<size>1.02 0.89 0</size>
+<rotation>0 0 -31.2</rotation>
+<color>#6c4301</color>
+</object>
+<object>
+<asset refid="267"/>
+<type>furniture</type>
+<points>1.366 4.031 0</points>
+<size>0.78 0.67 0</size>
+<rotation>0 0 539.95</rotation>
+<color>#b59158</color>
+</object>
+<object>
+<asset refid="267"/>
+<type>furniture</type>
+<points>0.622 2.458 0</points>
+<size>2.46 0.79 0</size>
+<rotation>0 0 -90</rotation>
+<color>#5e3a01</color>
+</object>
+<object>
+<asset refid="758"/>
+<type>furniture</type>
+<points>12.08 6.72 0</points>
+<size>2.93 0.821 0</size>
+<rotation>0 0 1800</rotation>
+</object>
+<object>
+<asset refid="1298"/>
+<type>furniture</type>
+<points>4.23 2.46 0</points>
+<size>4.22 0.55 0</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="1675"/>
+<type>furniture</type>
+<points>-2.95 6.36 0</points>
+<size>2.13 0.63 0</size>
+<rotation>0 0 -360</rotation>
+</object>
+<object>
+<asset refid="1675"/>
+<type>furniture</type>
+<points>-2.94 8.48 0</points>
+<size>2.12 0.5 0</size>
+<rotation>0 0 900</rotation>
+</object>
+<object>
+<asset refid="502"/>
+<type>furniture</type>
+<points>-2.81 -0.57 0</points>
+<size>2.68 1.2 0</size>
+<rotation>0 0 540</rotation>
+</object>
+<object>
+<asset refid="502"/>
+<type>furniture</type>
+<points>-0.17 -1.26 0</points>
+<size>2.52 0.83 0</size>
+<rotation>0 0 -270</rotation>
+</object>
+<object>
+<asset refid="267"/>
+<type>furniture</type>
+<points>2.268 4.052 0</points>
+<size>0.78 0.67 0</size>
+<rotation>0 0 539.95</rotation>
+<color>#c0a271</color>
+</object>
+<object>
+<asset refid="3775"/>
+<type>furniture</type>
+<points>-1.46 9.42 0</points>
+<size>0.79 0.661 0</size>
+</object>
+<object>
+<asset refid="701"/>
+<type>furniture</type>
+<points>-10.28 2.29 0</points>
+<size>5.18 1.21 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="4442"/>
+<type>furniture</type>
+<points>-2.34 -0.66 0</points>
+<size>0.7 0.6 0</size>
+<rotation>0 0 -179.01</rotation>
+</object>
+<object>
+<asset refid="496"/>
+<type>furniture</type>
+<points>-1.42 -2.86 0</points>
+<size>0.79 0.67 0</size>
+<rotation>0 0 -5040</rotation>
+</object>
+<object>
+<asset refid="4076"/>
+<type>door</type>
+<points>-8.81 5.38 0</points>
+<size>0.8 0.281 2.2</size>
+<rotation>0 0 90</rotation>
+<mirrored>1 0 0</mirrored>
+</object>
+<object>
+<asset refid="1675"/>
+<type>furniture</type>
+<points>-1.51 7.38 0</points>
+<size>2.7 0.87 0</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="3756"/>
+<type>window</type>
+<points>-10.82 7.57 0.65</points>
+<size>1.5 0.25 1.6</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="308"/>
+<type>furniture</type>
+<points>-4.71 6.44 0</points>
+<size>0.65 0.51 0</size>
+<rotation>0 0 35.81</rotation>
+</object>
+<object>
+<asset refid="4076"/>
+<type>door</type>
+<points>4.29 -5.27 0</points>
+<size>0.9 0.25 2.2</size>
+<rotation>0 0 90</rotation>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="4076"/>
+<type>door</type>
+<points>3.32 -6.33 0</points>
+<size>1.2 0.187 2.2</size>
+</object>
+<object>
+<asset refid="4076"/>
+<type>door</type>
+<points>2.03 -5.55 0</points>
+<size>0.9 0.18 2.2</size>
+<rotation>0 0 90</rotation>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="219"/>
+<type>window</type>
+<points>0.71 -9.51 0.4</points>
+<size>1.65 0.15 1.8</size>
+</object>
+<object>
+<asset refid="209"/>
+<type>door</type>
+<points>3.43 -10.51 0</points>
+<size>1.709 0.25 2.2</size>
+<rotation>0 0 164.94</rotation>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="872"/>
+<type>furniture</type>
+<points>3.833 -3.851 0</points>
+<size>1.52 0.59 0</size>
+<rotation>0 0 450</rotation>
+</object>
+<object>
+<asset refid="208"/>
+<type>door</type>
+<points>2.229 0.05 0</points>
+<size>2.4 0.178 2.2</size>
+</object>
+<object>
+<asset refid="52"/>
+<type>furniture</type>
+<points>-2.55 12.51 0</points>
+<size>2.97 1.45 0</size>
+</object>
+<object>
+<asset refid="4400"/>
+<type>furniture</type>
+<points>-10.64 8.68 0</points>
+<size>0.51 0.14 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="4076"/>
+<type>door</type>
+<points>-10.07 5.99 0</points>
+<size>0.9 0.25 2.2</size>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="222"/>
+<type>door</type>
+<points>-8.8 7.49 0</points>
+<size>1.2 0.187 2.2</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="496"/>
+<type>furniture</type>
+<points>-0.6 -3.76 0</points>
+<size>0.79 0.54 0</size>
+<rotation>0 0 -4859.79</rotation>
+</object>
+<object>
+<asset refid="224"/>
+<type>window</type>
+<points>2.03 -7.91 1.9</points>
+<size>2.8 0.18 0.5</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="4076"/>
+<type>door</type>
+<points>-10.99 15.01 0</points>
+<size>0.9 0.25 2.2</size>
+<mirrored>1 1 0</mirrored>
+</object>
+<object>
+<asset refid="5191"/>
+<type>door</type>
+<points>-10 16.34 0</points>
+<size>2.35 0.319 2.2</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="e920"/>
+<type>door</type>
+<points>-6.179 5.96 0</points>
+<size>0.94 0.191 2.2</size>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="869"/>
+<type>furniture</type>
+<points>1.43 8.72 0</points>
+<size>0.62 0.65 0</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="3825"/>
+<type>furniture</type>
+<points>2.38 -2.84 0</points>
+<size>0.68 0.77 0</size>
+</object>
+<object>
+<asset refid="3831"/>
+<type>furniture</type>
+<points>-9.02 0.6 0</points>
+<size>0.821 0.99 0</size>
+</object>
+<object>
+<asset refid="3825"/>
+<type>furniture</type>
+<points>-9.19 4.2 0</points>
+<size>0.6 0.8 0</size>
+</object>
+<object>
+<asset refid="216"/>
+<type>door</type>
+<points>-4.12 7.61 0</points>
+<size>0.98 0.25 2.2</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="4076"/>
+<type>door</type>
+<points>5.25 -6.61 0</points>
+<size>0.9 0.25 2.2</size>
+<rotation>0 0 165.15</rotation>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="689"/>
+<type>furniture</type>
+<points>0.71 -8.01 0</points>
+<size>2.229 1.86 0</size>
+<rotation>0 0 -89.54</rotation>
+</object>
+<object>
+<asset refid="209"/>
+<type>door</type>
+<points>-5.37 -6.6 0</points>
+<size>3.01 0.085 2.2</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="759"/>
+<type>furniture</type>
+<points>-5.8 -10.22 0</points>
+<size>1.89 0.68 0</size>
+<rotation>0 0 135</rotation>
+</object>
+<object>
+<asset refid="200"/>
+<type>door</type>
+<points>-7.259 -22.36 0</points>
+<size>0.9 0.14 2.2</size>
+</object>
+<object>
+<asset refid="209"/>
+<type>door</type>
+<points>0.07 6.02 0</points>
+<size>1.709 0.25 2.2</size>
+<mirrored>0 1 0</mirrored>
+</object>
+<object>
+<asset refid="372"/>
+<type>furniture</type>
+<points>2.375 -4.184 0</points>
+<size>1.77 0.41 2.4</size>
+<rotation>0 0 269.88</rotation>
+</object>
+<object>
+<asset refid="3276"/>
+<type>furniture</type>
+<points>3.85 -1.65 0</points>
+<size>2.74 0.67 0</size>
+<rotation>0 0 89.43</rotation>
+</object>
+<object>
+<asset refid="3276"/>
+<type>furniture</type>
+<points>-9.071 -2.42 0</points>
+<size>3.09 0.67 0</size>
+<rotation>0 0 270</rotation>
+</object>
+<object>
+<asset refid="502"/>
+<type>furniture</type>
+<points>-1.08 -2.86 0</points>
+<size>0.7 2.7 0</size>
+<rotation>0 0 450</rotation>
+</object>
+<object>
+<asset refid="372"/>
+<type>furniture</type>
+<points>1.595 -2.992 0</points>
+<size>1.15 0.425 2.4</size>
+<rotation>0 0 360</rotation>
+</object>
+<object>
+<asset refid="4601"/>
+<type>furniture</type>
+<points>1.652 -2.052 0</points>
+<size>0.962 0.817 0</size>
+<rotation>0 0 -403.24</rotation>
+</object>
+<object>
+<asset refid="142"/>
+<type>furniture</type>
+<points>1.522 -3.735 0</points>
+<size>0.61 0.31 0</size>
+<rotation>0 0 180</rotation>
+<scalable>false</scalable>
+</object>
+<object>
+<asset refid="e920"/>
+<type>door</type>
+<points>-5.13 9.782 0</points>
+<size>0.89 0.152 2.2</size>
+<rotation>0 0 90</rotation>
+<mirrored>1 1 0</mirrored>
+</object>
+<object>
+<asset refid="224"/>
+<type>window</type>
+<points>0.46 -1.425 1.5</points>
+<size>2.5 0.25 1.1</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="209"/>
+<type>door</type>
+<points>-0.67 -19.17 0</points>
+<size>3.01 0.142 2.2</size>
+</object>
+<object>
+<asset refid="202"/>
+<type>door</type>
+<points>-5.413 -21.596 0</points>
+<size>1 0.225 2.2</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="96"/>
+<type>furniture</type>
+<points>-6.057 -23.456 0</points>
+<size>0.79 1.01 0</size>
+<rotation>0 0 4320</rotation>
+</object>
+<object>
+<asset refid="1302"/>
+<type>furniture</type>
+<points>0.794 -1.625 0</points>
+<size>2.964 0.463 1.2</size>
+<rotation>0 0 -90</rotation>
+</object>
+<object>
+<asset refid="3760"/>
+<type>window</type>
+<points>-9.546 -2.29 0.7</points>
+<size>2.8 0.25 1.6</size>
+<rotation>0 0 90</rotation>
+</object>
+<object>
+<asset refid="602"/>
+<type>furniture</type>
+<points>-7.083 -1.907 0</points>
+<size>2.5 3.5 0</size>
+</object>
+<object>
+<asset refid="988"/>
+<type>furniture</type>
+<points>-7.155 -2.025 0</points>
+<size>3.111 2.002 0</size>
+<rotation>0 0 90</rotation>
+</object>
+</objects>
+<areas type="array">
+<area>
+<layer>0</layer>
+<type>generated_area</type>
+<points>
+-4.19 11.29 0 -4.19 12.28 0,-4.19 12.28 0 -7.3 12.28 0,-7.3 12.28 0 -7.3 10.48 0,-7.3 10.48 0 -4.24 10.48 0,-4.24 10.48 0 -4.24 11.29 0,-4.24 11.29 0 -4.19 11.29 0
+</points>
+<name>Toilette</name>
+<color>#6b6b6b</color>
+<asset refid="3499"/>
+</area>
+<area>
+<layer>1</layer>
+<type>generated_area</type>
+<points>
+-7.45 12.28 0 -8.64 12.28 0,-8.64 12.28 0 -8.64 9.32 0,-8.64 9.32 0 -5.21 9.32 0,-5.21 9.32 0 -5.21 10.33 0,-5.21 10.33 0 -7.45 10.33 0,-7.45 10.33 0 -7.45 12.28 0
+</points>
+<color>#d4e2f0</color>
+</area>
+<area>
+<layer>2</layer>
+<type>generated_area</type>
+<points>
+3.76 12.28 0 -0.84 12.28 0,-0.84 12.28 0 -0.84 11.77 0,-0.84 11.77 0 -0.84 10.82 0,-0.84 10.82 0 -1.09 10.82 0,-1.09 10.82 0 -1.09 11.7 0,-1.09 11.7 0 -3.99 11.7 0,-3.99 11.7 0 -3.99 10.33 0,-3.99 10.33 0 -5.05 10.33 0,-5.05 10.33 0 -5.05 9.32 0,-5.05 9.32 0 -3.99 9.32 0,-3.99 9.32 0 -3.99 9.15 0,-3.99 9.15 0 -3.99 9.02 0,-3.99 9.02 0 -1.09 9.02 0,-1.09 9.02 0 -1.09 9.15 0,-1.09 9.15 0 -0.84 9.15 0,-0.84 9.15 0 -0.84 8.89 0,-0.84 8.89 0 -0.84 6.24 0,-0.84 6.24 0 0.85 6.24 0,0.85 6.24 0 0.85 9.38 0,0.85 9.38 0 3.76 9.38 0,3.76 9.38 0 3.76 12.28 0
+</points>
+<color>#ecc486</color>
+</area>
+<area>
+<layer>3</layer>
+<type>generated_area</type>
+<points>
+-10.12 15.14 0 -12.29 15.14 0,-12.29 15.14 0 -12.29 13.77 0,-12.29 13.77 0 -15.81 13.77 0,-15.81 13.77 0 -15.81 15.01 0,-15.81 15.01 0 -15.81 17.65 0,-15.81 17.65 0 -10.12 17.65 0,-10.12 17.65 0 -10.12 15.14 0
+</points>
+<color>#ecc486</color>
+</area>
+<area>
+<layer>4</layer>
+<type>custom_area</type>
+<points>
+-11.01 5.85 0 -11.01 -0.11 0,-11.01 -0.11 0 -9.61 -0.11 0,-9.61 -0.11 0 -9.61 4.88 0,-9.61 4.88 0 -8.89 4.88 0,-8.89 4.88 0 -8.86 5.85 0,-8.86 5.85 0 -11.01 5.85 0
+</points>
+<color>#afafaf</color>
+<asset refid="3503"/>
+</area>
+<area>
+<layer>5</layer>
+<type>custom_area</type>
+<points>
+9.06 10.51 0 4.01 17.3 0 15.51 15.88 0,4.01 17.3 0 -9.94 17.99 0,-9.94 17.99 0 -10.07 15.01 0,-10.07 15.01 0 -12.1 15.1 0,-12.1 15.1 0 -12.1 12.71 0,-12.1 12.71 0 -4.03 12.71 0,-4.03 12.71 0 -4.03 12.43 0,-4.03 12.43 0 -1.2 12.42 0,-1.2 12.42 0 -1.2 12.64 0,-1.2 12.64 0 3.77 12.64 0,3.77 12.64 0 3.77 10.39 0,3.77 10.39 0 9.06 10.51 0 6.45 9.94 0
+</points>
+<name>Parkplatz2</name>
+<color>#afafaf</color>
+<asset refid="3503"/>
+</area>
+<area>
+<layer>6</layer>
+<type>custom_area</type>
+<points>
+7.15 -0.96 0 8.09 -0.96 0,8.09 -0.96 0 7.79 -1.49 0,7.79 -1.49 0 5.08 -6.25 0,5.08 -6.25 0 6.55 -6.25 0,6.55 -6.25 0 9.7 -0.96 0,9.7 -0.96 0 9.27 -0.96 0,9.27 -0.96 0 7.15 -0.96 0
+</points>
+<color>#bb9b67</color>
+<asset refid="3511"/>
+</area>
+<area>
+<layer>7</layer>
+<type>custom_area</type>
+<points>
+9.01 16.33 0 9.01 10.44 0,9.01 10.44 0 16.12 10.44 0,16.12 10.44 0 16.12 15.41 0,16.12 15.41 0 9.01 16.33 0
+</points>
+<name>Parkplatz1</name>
+<color>#afafaf</color>
+<asset refid="3503"/>
+</area>
+<area>
+<layer>8</layer>
+<type>custom_area</type>
+<points>
+-9.87 15.52 0 -9.87 17.99 0,-9.87 17.99 0 -7.99 17.99 0,-7.99 17.99 0 -7.99 15.52 0,-7.99 15.52 0 -7.99 15.52 0,-7.99 15.52 0 -9.87 15.52 0
+</points>
+<color>#afafaf</color>
+<asset refid="3503"/>
+</area>
+<area>
+<layer>9</layer>
+<type>custom_area</type>
+<points>
+1.28 -12.44 0 3.68 -12.44 0,3.68 -12.44 0 4.34 -11.1 0,4.34 -11.1 0 1.28 -10.38 0,1.28 -10.38 0 1.28 -12.44 0
+</points>
+<color>#afafaf</color>
+<asset refid="3503"/>
+</area>
+<area>
+<layer>10</layer>
+<type>custom_area</type>
+<points>
+-5.37 -9.45 0 -5.46 -10.88 0,-5.46 -10.88 0 -5.46 -18.99 0,-5.46 -18.99 0 1.32 -18.99 0,1.32 -18.99 0 1.32 -10.33 0,1.32 -10.33 0 1.32 -9.45 0,1.32 -9.45 0 1.32 -9.45 0,1.32 -9.45 0 -5.37 -9.45 0
+</points>
+<color>#afafaf</color>
+<asset refid="3503"/>
+</area>
+<area>
+<layer>11</layer>
+<type>custom_area</type>
+<points>
+6.99 -1.1 0 7.83 -1.33 0,7.83 -1.33 0 9.29 -1.59 0,9.29 -1.59 0 11.65 -1.59 0,11.65 -1.59 0 11.65 4.35 0,11.65 4.35 0 10.18 4.81 0,10.18 4.81 0 6.74 5.05 0,6.74 5.05 0 6.74 2.34 0,6.74 2.34 0 6.99 -1.1 0
+</points>
+<name>Steg</name>
+<color>#bb9b67</color>
+<asset refid="3511"/>
+</area>
+</areas>
+<lines type="array">
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+3.88 12.4 0 -0.97 12.4 0,3.88 12.4 2.8 -0.97 12.4 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#ffcccccc</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-0.97 12.4 0 -0.97 11.68 0,-0.97 12.4 2.8 -0.97 11.68 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 11.68 0 -4.12 12.4 0,-4.12 11.68 2.8 -4.12 12.4 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 12.4 0 -7.37 12.4 0,-4.12 12.4 2.8 -7.37 12.4 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#fff27716</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-7.37 12.4 0 -8.77 12.4 0,-7.37 12.4 2.8 -8.77 12.4 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#fff27716</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-8.77 12.4 0 -8.77 11.32 0,-8.77 12.4 2.8 -8.77 11.32 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#ffef7c14</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-8.81 4.79 0 -9.61 4.79 0,-8.81 4.79 5 -9.61 4.79 5
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+<color-right>#e2f27716</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-9.546 -3.35 0 -9.546 -4.04 0,-9.546 -3.35 2.8 -9.546 -4.04 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#ffed8011</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+2.03 -9.51 0 2.03 -10.38 0,2.03 -9.51 2.8 2.03 -10.38 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-left>#ff745303</color-left>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+7.68 -11.65 0 7.68 -7.25 0,7.68 -11.65 2.8 7.68 -7.25 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#ff7f5f02</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+4.29 0.05 0 4.68 0.05 0,4.29 0.05 2.8 4.68 0.05 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#ffcccccc</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>4.68 0.05 0 4.68 4.78 0,4.68 0.05 2.8 4.68 4.78 5</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 11.68 0 -4.12 10.4 0,-4.12 11.68 2.8 -4.12 10.4 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-7.37 10.4 0 -7.37 12.4 0,-7.37 10.4 2.8 -7.37 12.4 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 11.68 0 -0.97 11.68 0,-4.12 11.68 2.8 -0.97 11.68 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.13 10.4 0 -5.13 9.25 0,-5.13 10.4 2.8 -5.13 9.25 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+<color-right>#ffcccccc</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.13 9.25 0 -8.77 9.25 0,-5.13 9.25 2.8 -8.77 9.25 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.13 10.4 0 -7.37 10.4 0,-5.13 10.4 2.8 -7.37 10.4 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.37 -4.04 0 -9.546 -4.04 0,-5.37 -4.04 2.8 -9.546 -4.04 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+<color-left>#fff66d1c</color-left>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+2.03 -9.51 0 -5.37 -9.51 0,2.03 -9.51 2.8 -5.37 -9.51 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+<color-left>#ff6f4b03</color-left>
+<color-right>#ff806d01</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.37 -9.51 0 -5.37 -4.04 0,-5.37 -9.51 2.8 -5.37 -4.04 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+<color-left>#ff883f0e</color-left>
+<color-right>#ff5c3904</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+4.29 0.05 0 4.29 -6.33 0,4.29 0.05 2.8 4.29 -6.33 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-left>#ffcccccc</color-left>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-9.61 0.03 0 -9.546 0.03 0,-9.61 0.03 2.8 -9.546 0.03 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#fff66d1c</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-9.61 4.79 0 -9.61 0.03 0,-9.61 4.79 5 -9.61 0.03 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+<color-right>#fff27716</color-right>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.37 -3.35 0 0.46 -3.35 0,-5.37 -3.35 2.8 0.46 -3.35 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.413 -19.17 0 1.244 -19.17 0,-5.413 -19.17 2.8 1.244 -19.17 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+1.244 -19.17 0 1.244 -24.13 0,1.244 -19.17 2.8 1.244 -24.13 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+1.244 -24.13 0 -5.413 -24.13 0,1.244 -24.13 2.8 -5.413 -24.13 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.413 -20.71 0 -5.413 -19.17 0,-5.413 -20.71 2.8 -5.413 -19.17 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.413 -24.13 0 -6.619 -24.13 0,-5.413 -24.13 2.8 -6.619 -24.13 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-7.927 -22.36 0 -7.927 -20.71 0,-7.927 -22.36 2.8 -7.927 -20.71 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-7.927 -20.71 0 -5.413 -20.71 0,-7.927 -20.71 2.8 -5.413 -20.71 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.413 -20.71 0 -5.413 -24.13 0,-5.413 -20.71 2.8 -5.413 -24.13 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+7.21 -11.65 0 7.68 -11.65 0,7.21 -11.65 2.8 7.68 -11.65 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+7.68 -7.25 0 7.22 -7.25 0,7.68 -7.25 2.8 7.22 -7.25 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 10.4 0 -5.13 10.4 0,-4.12 10.4 2.8 -5.13 10.4 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.13 9.25 0 -4.12 9.25 0,-5.13 9.25 2.8 -4.12 9.25 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-10 15.01 0 -12.17 15.01 0,-10 15.01 2.8 -12.17 15.01 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-15.94 15.01 0 -15.94 17.77 0,-15.94 15.01 2.8 -15.94 17.77 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-15.94 17.77 0 -10 17.77 0,-15.94 17.77 2.8 -10 17.77 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-10 17.77 0 -10 15.01 0,-10 17.77 2.8 -10 15.01 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+3.88 9.25 0 3.88 12.4 0,3.88 9.25 2.8 3.88 12.4 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+3.88 9.25 0 0.97 9.25 0,3.88 9.25 2.8 0.97 9.25 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>4.68 4.78 0 3.96 4.78 0,4.68 4.78 5 3.96 4.78 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+4.29 -6.33 0 2.03 -6.33 0,4.29 -6.33 2.8 2.03 -6.33 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-8.77 10.4 0 -8.77 11.32 0,-8.77 10.4 2.8 -8.77 11.32 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+3.96 4.78 0 3.88 9.25 0,3.96 4.78 2.8 3.88 9.25 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-0.97 8.86 0 -4.12 8.86 0,-0.97 8.86 2.8 -4.12 8.86 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+3.88 6.02 0 0.97 6.02 0,3.88 6.02 2.8 0.97 6.02 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+0.97 6.02 0 0.97 9.25 0,0.97 6.02 2.8 0.97 9.25 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-0.97 10.82 0 -0.97 11.68 0,-0.97 10.82 2.8 -0.97 11.68 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 8.26 0 -4.12 5.99 0,-4.12 8.26 2.8 -4.12 5.99 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+2.03 -6.33 0 2.03 -5.46 0,2.03 -6.33 2.8 2.03 -5.46 2.8
+</points>
+<thickness>0.18</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-12.17 15.01 0 -15.94 15.01 0,-12.17 15.01 2.8 -15.94 15.01 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-8.77 9.25 0 -8.77 10.4 0,-8.77 9.25 2.8 -8.77 10.4 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-9.61 5.96 0 -0.95 5.96 0,-9.61 5.96 2.8 -0.95 5.96 2.8
+</points>
+<thickness>0.2</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 8.86 0 -4.12 9.25 0,-4.12 8.86 2.8 -4.12 9.25 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-5.37 -3.35 0 -5.37 -4.04 0,-5.37 -3.35 2.8 -5.37 -4.04 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 8.86 0 -4.12 8.26 0,-4.12 8.86 2.8 -4.12 8.26 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-0.97 5.89 0 -0.97 8.86 0,-0.97 5.89 2.8 -0.97 8.86 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+2.03 -6.33 0 2.03 -9.51 0,2.03 -6.33 2.8 2.03 -9.51 2.8
+</points>
+<thickness>0.18</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+4.29 0.05 0 0.46 0.05 0,4.29 0.05 2.8 0.46 0.05 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+0.46 0.05 0 0.46 -3.35 0,0.46 0.05 2.8 0.46 -3.35 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+0.46 -3.35 0 2.03 -3.35 0,0.46 -3.35 2.8 2.03 -3.35 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-9.546 -3.35 0 -9.546 0.03 0,-9.546 -3.35 2.8 -9.546 0.03 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-8.77 10.4 0 -10.82 10.4 0,-8.77 10.4 2.8 -10.82 10.4 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-10.82 10.4 0 -10.82 5.99 0,-10.82 10.4 2.8 -10.82 5.99 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-10.82 5.99 0 -8.81 5.99 0,-10.82 5.99 2.8 -8.81 5.99 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-8.81 5.99 0 -8.81 4.79 0,-8.81 5.99 2.8 -8.81 4.79 5
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-4.12 7.25 0 -4.12 8.26 0,-4.12 7.25 2.8 -4.12 8.26 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+2.03 -5.46 0 2.03 -3.35 0,2.03 -5.46 2.8 2.03 -3.35 2.8
+</points>
+<thickness>0.18</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-7.927 -24.13 0 -6.619 -24.13 0,-7.927 -24.13 2.8 -6.619 -24.13 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-6.619 -24.13 0 -6.619 -22.36 0,-6.619 -24.13 2.8 -6.619 -22.36 2.8
+</points>
+<thickness>0.15</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-6.619 -22.36 0 -7.927 -22.36 0,-6.619 -22.36 2.8 -7.927 -22.36 2.8
+</points>
+<thickness>0.14</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>
+-7.927 -22.36 0 -7.927 -24.13 0,-7.927 -22.36 2.8 -7.927 -24.13 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+1.295 -21.7 0 -1.9 -21.7 0,1.295 -21.7 2.8 -1.9 -21.7 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+-1.9 -21.7 0 -3.47 -22.17 0,-1.9 -21.7 2.8 -3.47 -22.17 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+-5.427 -22.17 0 -3.47 -22.17 0,-5.427 -22.17 2.8 -3.47 -22.17 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+-8.77 9.25 0 -8.81 5.99 0,-8.77 9.25 2.8 -8.81 5.99 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+7.68 -11.65 0 2.02 -10.13 0,7.68 -11.65 2.8 2.02 -10.13 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+7.68 -7.25 0 4.06 -6.29 0,7.68 -7.25 2.8 4.06 -6.29 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+-8.77 9.25 0 -9.76 9.25 0,-8.77 9.25 2.8 -9.76 9.25 2.8
+</points>
+<thickness>0.07</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+0.97 6.02 0 -0.85 6.02 0,0.97 6.02 2.8 -0.85 6.02 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+-3.47 -22.17 0 -3.47 -23.996 0,-3.47 -22.17 2.8 -3.47 -23.996 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>
+-9.61 -0.11 0 -8.685 -0.11 0,-9.61 -0.11 2.8 -8.685 -0.11 2.8
+</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+</lines>
+</design>
