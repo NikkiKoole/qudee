@@ -31,7 +31,11 @@ module.exports.loadJSONPAssets = (urlArray) ->
       sprite =  new PIXI.Sprite.fromImage(url+'.under')
       scene.assetContainer.addChild(sprite)
     if data.color
-      newdata = data.color #maskFlip data.color 
+      #newdata = data.color #maskFlip data.color 
+      # TODO : this maskFlip function should be finished before continuing.
+      # atm it messes up the dom because it's creating to many canvasses.
+      # i *think* i need some promises to handle it justly
+      newdata = maskFlip data.color 
       createImage newdata, url, '.color' 
       sprite =  new PIXI.Sprite.fromImage(url+'.color')
       #sprite.position.x = Math.random()*800

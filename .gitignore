@@ -5,3 +5,5 @@ Makefile
 *.json~
 node_modules/
 .DS_Store
+build/bundle.js
+build/bundle.min.js
