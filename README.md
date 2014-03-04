@@ -1,12 +1,12 @@
 >ah, right, so you think you could just some 'setLineWidth(wall.thickness)' of you drawing lib.?  
-###yes I'd like that  
+#####yes I'd like that  
 >##:) cute  
 
 and qudee was born.
 
 It's a cute, quick and dirty approach of drawing floorplans.
 It handles floorplanner FML files and roomstyler RS files.
-It utilizes PIXI.JS as its rendering backend
+It utilizes [Pixi.js](http://www.pixijs.com/) as its rendering backend
 
 ##usage##
 Choose a FML(xml) or RS(json) file with the filepanel (I've put a few files in data/).
