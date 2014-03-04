@@ -1,6 +1,5 @@
 *.html~
 *.coffee~
-Makefile
 *.xml~
 *.json~
 node_modules/
