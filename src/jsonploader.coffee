@@ -2,53 +2,68 @@
 window['receive_asset'] = (asset) ->
 
 Floorplan = require './floorplan'
-{createImage, changeColInUri, maskFlip} = require './utils'
-
-
-loadAsset = (url, error, succes) ->
-  $.ajax
-    url: url
-    dataType: 'jsonp'
-    jsonpCallback: 'receive_asset'
-    jsonp: 'callback'
-    error: error
-    success: succes
+{maskFlip} = require './utils'
+{Promise} = require 'es6-promise'
 
 
 module.exports.loadJSONPAssets = (urlArray) ->
-  # loads all urls in urlArray sequentially and by waiting for their turn.
-  # there is a big issue with canvas creation hiding in here, I'll need promises to fix it I think.
-  
-  url = null  # the current url that's been loaded.
-  delay = (ms, func) -> setTimeout func, ms
+  sequence = Promise.resolve()
+  urlArray.forEach (url) ->
+    sequence = sequence.then ->
+      return getJSONP url
+    .then (val) ->
+      return createImage val, 'under', url+'.under'
+    .then (val) -> 
+      return createShape val, url+'.color'
+    .then (val) ->
+      return createImage val, 'over', url+'.over'
 
-  error = (data) -> 
-    console.log 'error',data
-    advanceLoader(false)
-  succes = (data) -> 
-    scene = Floorplan.get()
-    if data.under
-      createImage data.under, url, '.under' 
-      sprite =  new PIXI.Sprite.fromImage(url+'.under')
-      scene.assetContainer.addChild(sprite)
-    if data.color
-      #newdata = data.color #use the non changed color shape if maskFlip keeps messing up the DOM
-      newdata = maskFlip data.color 
-      createImage newdata, url, '.color' 
-      sprite =  new PIXI.Sprite.fromImage(url+'.color')
-      scene.assetContainer.addChild(sprite)
-      console.log 'data.color'
-    if data.over 
-      createImage data.over, url, '.over' 
-      sprite =  new PIXI.Sprite.fromImage(url+'.over')
-      scene.assetContainer.addChild(sprite)
-    advanceLoader(true)
+
+getJSONP = (url) ->
+  new Promise (resolve, reject) ->
+    $.ajax
+      url: url
+      dataType: 'jsonp'
+      jsonpCallback: 'receive_asset'
+      jsonp: 'callback'
+      error: (data) -> reject data
+      success: (data) -> resolve data
+
+createImage = (jsonp, layer, id) ->
+  #layer is one of ['under','color','over']
+  new Promise (resolve, reject) ->
+    if jsonp[layer]
+      imageBuilder(id, resolve(jsonp), reject(jsonp), jsonp[layer])
+    else
+      resolve(jsonp)
+
+createShape = (jsonp, url) ->
+  # A shape is created by maskFlipping an image (the fp 'color' layer) 
+  new Promise (resolve, reject) ->
+    if jsonp['color']
+      imageBuilder(url+'.shape', resolve(jsonp), reject(jsonp), maskFlip jsonp['color'])
+    else
+      resolve(jsonp)
+
+imageBuilder = (id, resolve, reject, src) ->
+  if PIXI.TextureCache[id]
+    console.log "#{id} is already in TextureCache"
+    resolve #don't need same image twice
   
-  advanceLoader = (hadSucces) ->
-    console.log 'loader advancing'
-    if urlArray.length > 0
-      url = urlArray.pop()
-      if hadSucces then loadAsset url, error, succes 
-  
-  advanceLoader(true)
+  image = addImageToCache(id)
+  image.onload = -> resolve
+  image.onerror = -> reject
+  image.src = src
+
+
+addImageToCache = (id) ->
+  image = new Image()
+  baseTexture = new PIXI.BaseTexture image
+  texture = new PIXI.Texture baseTexture
+  PIXI.Texture.addTextureToCache texture,id
+  image
+
+
+
+
 

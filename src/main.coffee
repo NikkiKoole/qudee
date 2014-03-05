@@ -1,9 +1,13 @@
 Floorplan = require './floorplan'
 {loadFloorPlan} = require './importer' 
 
+
 handleFileSelect = (event) ->
   loadFloorPlan 'data/' + event.target.files[0].name
 
+
+
+  
 
 init = ->
   stats = new Stats()
@@ -37,7 +41,7 @@ init = ->
     scene.areaContainer.tint = value.replace('#', '0x')
   gui.addColor(scene, 'assetColor').onChange (value) -> 
     scene.tintAssets value
-  loadFloorPlan 'data/rijksgebouwendienst.xml'
+  loadFloorPlan 'data/home1.xml'
   
   animate = () -> 
     stats.begin()
@@ -49,4 +53,4 @@ init = ->
 
 window.onload = ->
   init()
-
+  

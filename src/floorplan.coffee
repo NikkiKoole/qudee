@@ -27,7 +27,7 @@ module.exports = class Floorplan extends PIXI.Stage
   tintAssets: (tint) ->
     for child in @assetContainer.children
       child.tint =  @assetColor.replace('#', '0x')
-      console.log child.tint
+
 
   destroyData: ->
     @wallGraph = new WallGraph()
