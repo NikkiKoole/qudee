@@ -5,6 +5,11 @@ Floorplan = require './floorplan'
 {maskFlip} = require './utils'
 {Promise} = require 'es6-promise'
 
+drawAllInCache = ->
+  scene = Floorplan.get()
+  for k,v of PIXI.TextureCache
+    sprite =  new PIXI.Sprite.fromImage(k)
+    scene.assetContainer.addChild(sprite)
 
 module.exports.loadJSONPAssets = (urlArray) ->
   sequence = Promise.resolve()
@@ -17,7 +22,7 @@ module.exports.loadJSONPAssets = (urlArray) ->
       return createShape val, url+'.color'
     .then (val) ->
       return createImage val, 'over', url+'.over'
-
+  sequence.then () -> drawAllInCache()
 
 getJSONP = (url) ->
   new Promise (resolve, reject) ->
@@ -46,22 +51,15 @@ createShape = (jsonp, url) ->
       resolve(jsonp)
 
 imageBuilder = (id, resolve, reject, src) ->
-  if PIXI.TextureCache[id]
-    console.log "#{id} is already in TextureCache"
-    resolve #don't need same image twice
-  
-  image = addImageToCache(id)
-  image.onload = -> resolve
+  image = new Image()
+  image.onload = -> 
+    baseTexture = new PIXI.BaseTexture image
+    texture = new PIXI.Texture baseTexture
+    PIXI.Texture.addTextureToCache texture,id
+    resolve
   image.onerror = -> reject
   image.src = src
 
-
-addImageToCache = (id) ->
-  image = new Image()
-  baseTexture = new PIXI.BaseTexture image
-  texture = new PIXI.Texture baseTexture
-  PIXI.Texture.addTextureToCache texture,id
-  image
 
 
 
