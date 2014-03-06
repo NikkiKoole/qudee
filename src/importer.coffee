@@ -98,9 +98,9 @@ constructFloorplanFromFML = (fml) ->
 
   for area in areas
     outPoints = []
-    prePoints = area.points[0].split(",")
-    for point in prePoints
-      [x1, y1, z1, x2, y2, z2] = point.split(" ")
+    pointGroup = area.points[0].split(",")
+    for pointPair in pointGroup
+      [x1, y1, z1, x2, y2, z2] = pointPair.split(" ")
       outPoints.push {x:x1 * MULTIPLIER, y:y1 * MULTIPLIER}
       outPoints.push {x:x2 * MULTIPLIER, y:y2 * MULTIPLIER}
     scene.drawArea outPoints

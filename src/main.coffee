@@ -1,9 +1,10 @@
 Floorplan = require './floorplan'
 {loadFloorPlan} = require './importer' 
-
+{Promise} = require 'es6-promise'
 
 handleFileSelect = (event) ->
   loadFloorPlan 'data/' + event.target.files[0].name
+
 
 
 
@@ -53,4 +54,4 @@ init = ->
 
 window.onload = ->
   init()
-  
+

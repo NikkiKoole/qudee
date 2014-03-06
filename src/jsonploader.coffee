@@ -16,13 +16,32 @@ module.exports.loadJSONPAssets = (urlArray) ->
   urlArray.forEach (url) ->
     sequence = sequence.then ->
       return getJSONP url
-    .then (val) ->
-      return createImage val, 'under', url+'.under'
-    .then (val) -> 
-      return createShape val, url+'.color'
-    .then (val) ->
-      return createImage val, 'over', url+'.over'
+    .then (data) -> 
+      return Promise.all([
+        createImage data, 'under', url+'.under',
+        #createImage data, 'color', url+'.color',
+        createImage data, 'over', url+'.over'
+      ])
+    .then (data) -> 
+      return createMask data[0]
+      .then (data) -> return createImage data, 'shape', url+'.shape'
+
+    .catch (data) -> console.log 'caught',data
   sequence.then () -> drawAllInCache()
+
+
+
+createMask = (data) ->
+  new Promise (resolve, reject) ->
+    if data['color']
+      mask = maskFlip data['color']
+      img = new Image()
+      img.onerror = -> reject mask
+      img.onload = => resolve mask 
+      img.src = mask
+    else
+      resolve data
+
 
 getJSONP = (url) ->
   new Promise (resolve, reject) ->
@@ -39,14 +58,6 @@ createImage = (jsonp, layer, id) ->
   new Promise (resolve, reject) ->
     if jsonp[layer]
       imageBuilder(id, resolve(jsonp), reject(jsonp), jsonp[layer])
-    else
-      resolve(jsonp)
-
-createShape = (jsonp, url) ->
-  # A shape is created by maskFlipping an image (the fp 'color' layer) 
-  new Promise (resolve, reject) ->
-    if jsonp['color']
-      imageBuilder(url+'.shape', resolve(jsonp), reject(jsonp), maskFlip jsonp['color'])
     else
       resolve(jsonp)
 
