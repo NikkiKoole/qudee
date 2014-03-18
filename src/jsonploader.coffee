@@ -1,9 +1,14 @@
 
-window['receive_asset'] = (asset) ->
+#window['receive_asset'] = (asset) -> console.log 'window receive asset',asset
 
 Floorplan = require './floorplan'
 {maskFlip} = require './utils'
 {Promise} = require 'es6-promise'
+
+imageLoadedCounter = null
+imageCounter = null
+jsonpCounter = null
+jsonCache = {}
 
 drawAllInCache = ->
   scene = Floorplan.get()
@@ -11,68 +16,63 @@ drawAllInCache = ->
     sprite =  new PIXI.Sprite.fromImage(k)
     scene.assetContainer.addChild(sprite)
 
-module.exports.loadJSONPAssets = (urlArray) ->
-  sequence = Promise.resolve()
-  urlArray.forEach (url) ->
-    sequence = sequence.then ->
-      return getJSONP url
-    .then (data) -> 
-      return Promise.all([
-        createImage data, 'under', url+'.under',
-        #createImage data, 'color', url+'.color',
-        createImage data, 'over', url+'.over'
-      ])
-    .then (data) -> 
-      return createMask data[0]
-      .then (data) -> return createImage data, 'shape', url+'.shape'
+getJSON = (url, data, callback) ->
+  head = document.getElementsByTagName("head")[0]
+  newScript = document.createElement 'script'
+  newScript.type = 'text/javascript'
+  newScript.src = url
+  head.appendChild newScript
 
-    .catch (data) -> console.log 'caught',data
-  sequence.then () -> drawAllInCache()
+onImageLoaded = ->
+  imageLoadedCounter += 1
+  if imageLoadedCounter >= imageCounter
+    console.log 'done loading all assets'
+    createShapesForAllColorAssets()
 
+newJSONP2 = (url) ->
+  getJSON url, {}, window.receive_asset = (asset) ->
+    jsonCache[asset.id] = asset
+    jsonpCounter -= 1
 
+    if jsonpCounter <= 0
+      console.log 'done with loading jsonp.'
+      for k,v of jsonCache
+        if v.under
+          imageCounter += 1
+          createImage v.under, k+".under", onImageLoaded
+        if v.color
+          imageCounter += 1
+          createImage v.color, k+".color", onImageLoaded
+        if v.over
+          imageCounter += 1
+          createImage v.over, k+".over", onImageLoaded
 
-createMask = (data) ->
-  new Promise (resolve, reject) ->
-    if data['color']
-      mask = maskFlip data['color']
-      img = new Image()
-      img.onerror = -> reject mask
-      img.onload = => resolve mask 
-      img.src = mask
-    else
-      resolve data
-
-
-getJSONP = (url) ->
-  new Promise (resolve, reject) ->
-    $.ajax
-      url: url
-      dataType: 'jsonp'
-      jsonpCallback: 'receive_asset'
-      jsonp: 'callback'
-      error: (data) -> reject data
-      success: (data) -> resolve data
-
-createImage = (jsonp, layer, id) ->
-  #layer is one of ['under','color','over']
-  new Promise (resolve, reject) ->
-    if jsonp[layer]
-      imageBuilder(id, resolve(jsonp), reject(jsonp), jsonp[layer])
-    else
-      resolve(jsonp)
-
-imageBuilder = (id, resolve, reject, src) ->
+createImage = (data, id, onLoad) ->
   image = new Image()
-  image.onload = -> 
+  image.onload = ->
+    #console.log id
     baseTexture = new PIXI.BaseTexture image
     texture = new PIXI.Texture baseTexture
-    PIXI.Texture.addTextureToCache texture,id
-    resolve
-  image.onerror = -> reject
-  image.src = src
+    PIXI.Texture.addTextureToCache texture, id
+    onLoad()
+  image.src = data
 
+createShapesForAllColorAssets = ->
+  colorKeys = (k for k,v of PIXI.TextureCache when endsWith k, '.color')
+  shapeCount = colorKeys.length
+  count = 0
+  for k in colorKeys
+    shapeImage = maskFlip PIXI.TextureCache[k].baseTexture
+    createImage shapeImage, k.replace('.color','.shape'), ->
+      count += 1
+      if count >= shapeCount
+        console.log 'done creating shapes.'
+        jsonCache = {}
+        drawAllInCache()
+        
+endsWith = (str, suffix) ->
+    str.indexOf(suffix, str.length - suffix.length) isnt -1
 
-
-
-
-
+module.exports.loadJSONPAssets = (urlArray) ->
+  jsonpCounter = urlArray.length
+  urlArray.map newJSONP2

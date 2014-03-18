@@ -32,6 +32,6 @@ module.exports = class WallGraph
       return @_cornerMap["#{x},#{y}"]
     else
       @_cornerMap["#{x},#{y}"] = new WallCorner(x,y)
-      return @_cornerMap["#{x},#{y}"] 
+      return @_cornerMap["#{x},#{y}"]
 
 

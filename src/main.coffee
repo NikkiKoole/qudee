@@ -1,16 +1,12 @@
 Floorplan = require './floorplan'
-{loadFloorPlan} = require './importer' 
+{loadFloorPlan} = require './importer'
 {Promise} = require 'es6-promise'
 
 handleFileSelect = (event) ->
   loadFloorPlan 'data/' + event.target.files[0].name
 
-
-
-
-  
-
 init = ->
+
   stats = new Stats()
   stats.setMode(0)
   stats.domElement.style.position = 'absolute'
@@ -34,17 +30,18 @@ init = ->
   gui = new dat.GUI()
   scene = Floorplan.get()
  
-  gui.addColor(scene, 'backgroundColor').onChange (value) -> 
+  gui.addColor(scene, 'backgroundColor').onChange (value) ->
     scene.setBackgroundColor value.replace('#', '0x')
-  gui.addColor(scene, 'wallColor').onChange (value) -> 
+  gui.addColor(scene, 'wallColor').onChange (value) ->
     scene.wallContainer.tint = value.replace('#', '0x')
-  gui.addColor(scene, 'areaColor').onChange (value) -> 
+  gui.addColor(scene, 'areaColor').onChange (value) ->
     scene.areaContainer.tint = value.replace('#', '0x')
-  gui.addColor(scene, 'assetColor').onChange (value) -> 
+  gui.addColor(scene, 'assetColor').onChange (value) ->
     scene.tintAssets value
-  loadFloorPlan 'data/home1.xml'
+
+  loadFloorPlan 'data/minha.xml'
   
-  animate = () -> 
+  animate = () ->
     stats.begin()
     requestAnimFrame(animate)
     renderer.render(Floorplan.get())
