@@ -33,7 +33,7 @@ init = ->
   gui.addColor(scene, 'backgroundColor').onChange (value) ->
     scene.setBackgroundColor value.replace('#', '0x')
   gui.addColor(scene, 'wallColor').onChange (value) ->
-    scene.wallContainer.tint = value.replace('#', '0x')
+     scene.wallContainer.tint = value.replace('#', '0x')
   gui.addColor(scene, 'areaColor').onChange (value) ->
     scene.areaContainer.tint = value.replace('#', '0x')
   gui.addColor(scene, 'assetColor').onChange (value) ->

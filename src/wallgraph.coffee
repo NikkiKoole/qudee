@@ -9,7 +9,7 @@ class WallCorner
 
 class WallEdge
   constructor : (@corner1, @corner2, @thickness) ->
-  getOtherCorner : (corner) ->
+  getOther : (corner) ->
     if corner.x is @corner1.x and corner.y is @corner1.y then return @corner2
     if corner.x is @corner2.x and corner.y is @corner2.y then return @corner1
     
