@@ -81,7 +81,7 @@ constructFloorplanFromRS = (rs) ->
   
 
 constructFloorplanFromFML = (fml) ->
-  MULTIPLIER = 100 
+  MULTIPLIER = 100
   scene = Floorplan.get()
   scene.destroyData()
   root = null
@@ -89,13 +89,15 @@ constructFloorplanFromFML = (fml) ->
     root = fml.design
   else if fml.hasOwnProperty 'project' # the portal one
     root = fml.project.floors[0].floor[0].designs[0].design[0]
-  else 
+  else
     console.log 'unknown', fml
-  
+
+#  console.log root
   lines = root.lines[0].line
   areas = root.areas[0].area
   assets = root.assets[0].asset
-
+  objects = root.objects[0].object
+  
   for area in areas
     outPoints = []
     pointGroup = area.points[0].split(",")
@@ -112,18 +114,41 @@ constructFloorplanFromFML = (fml) ->
       b = {x:parseInt(x2 * MULTIPLIER), y:parseInt(y2 * MULTIPLIER)}
       scene.addWall a, b, line.thickness[0] * MULTIPLIER
     else
-      console.log "#{line.type[0]} not drawn." 
+      console.log "#{line.type[0]} not drawn."
+
+  for object in objects
+    data =
+      id:object.asset?[0]['$']['refid']
+      type:object.type?[0]
+      mirrored:object.mirrored?[0].split(' ') or [0, 0,0]
+      points:object.points?[0].split(' ')
+      rotation:object.rotation?[0].split(' ')
+      size:object.size?[0].split(' ')
+    
+    x = parseInt(data.points?[0] * MULTIPLIER)
+    y = parseInt(data.points?[1] * MULTIPLIER)
+    width = parseInt(data.size?[0] * MULTIPLIER) or 0
+    height = parseInt(data.size?[1] * MULTIPLIER) or 0
+    rotation = parseInt(data.rotation?[2]) or 0
+    mirrored = [ parseInt(data.mirrored?[0]),
+                 parseInt(data.mirrored?[1]),
+                 parseInt(data.mirrored?[2])] or [0, 0, 0]
+
+    scene.addItem(x, y, width, height, rotation, data.type, data.id)
+
+
   assetURLS = []
   for asset in assets
-    if endsWith asset.url2d[0], 'flz' 
-      url = CDN+asset.url2d[0].replace('flz/','jsonp/').replace('.flz','.jsonp')
+    #console.log asset
+    if endsWith asset.url2d[0], 'flz'
+      url = CDN + asset.url2d[0]
+        .replace('flz/', 'jsonp'+'/')
+        .replace('.flz', '.jsonp')
       assetURLS.push url
     else
       console.log "not handling file #{asset.url2d[0]} yet"
-  loadJSONPAssets assetURLS
+  loadJSONPAssets assetURLS, scene.feedItemsAssets
   scene.drawWalls()
-
-
 
   console.log "lines: #{lines.length}, areas: #{areas.length}"
 

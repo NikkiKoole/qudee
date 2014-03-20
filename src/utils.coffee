@@ -24,7 +24,7 @@ module.exports.maskFlip = (image) ->
     if (r is white.r) and (g is white.g) and (b is white.b)
       #making white transparent
       data[x + 3] = 0
-    if (r is black.r) and (g is black.g) and (b is black.b)
+    else #if (r is black.r) and (g is black.g) and (b is black.b)
       #making black white
       data[x] = white.r
       data[x + 1] = white.g

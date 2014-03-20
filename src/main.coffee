@@ -24,7 +24,7 @@ init = ->
   output.id = "list"
   document.body.appendChild output
   
-  renderer = PIXI.autoDetectRenderer 2048, 2048, null, false, true
+  renderer = PIXI.autoDetectRenderer 1024, 1024, null, false, true
   document.body.appendChild renderer.view
 
   gui = new dat.GUI()
@@ -39,7 +39,7 @@ init = ->
   gui.addColor(scene, 'assetColor').onChange (value) ->
     scene.tintAssets value
 
-  loadFloorPlan 'data/minha.xml'
+  loadFloorPlan 'data/nuova.xml'
   
   animate = () ->
     stats.begin()
