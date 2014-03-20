@@ -1,6 +1,5 @@
 Floorplan = require './floorplan'
 {loadFloorPlan} = require './importer'
-{Promise} = require 'es6-promise'
 
 handleFileSelect = (event) ->
   loadFloorPlan 'data/' + event.target.files[0].name
@@ -29,15 +28,22 @@ init = ->
 
   gui = new dat.GUI()
   scene = Floorplan.get()
- 
-  gui.addColor(scene, 'backgroundColor').onChange (value) ->
+
+  background = gui.addFolder 'background'
+  background.addColor(scene, 'backgroundColor').onChange (value) ->
     scene.setBackgroundColor value.replace('#', '0x')
-  gui.addColor(scene, 'wallColor').onChange (value) ->
-     scene.wallContainer.tint = value.replace('#', '0x')
-  gui.addColor(scene, 'areaColor').onChange (value) ->
-    scene.areaContainer.tint = value.replace('#', '0x')
-  gui.addColor(scene, 'assetColor').onChange (value) ->
-    scene.tintAssets value
+
+  wall = gui.addFolder 'walls'
+  wall.addColor(scene.wallLayer, 'color').onChange (value) ->
+    scene.wallLayer.tint = value.replace('#', '0x')
+
+  areas = gui.addFolder 'areas'
+  areas.addColor(scene.areaLayer, 'color').onChange (value) ->
+    scene.areaLayer.tint = value.replace('#', '0x')
+
+  items = gui.addFolder 'items'
+  items.addColor(scene.itemLayer, 'color').onChange (value) ->
+    scene.tintItems value
 
   loadFloorPlan 'data/nuova.xml'
   
