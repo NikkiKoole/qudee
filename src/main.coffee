@@ -4,6 +4,8 @@ Floorplan = require './floorplan'
 handleFileSelect = (event) ->
   loadFloorPlan 'data/' + event.target.files[0].name
 
+STAGE = {width:1600, height:1600}
+
 init = ->
 
   stats = new Stats()
@@ -23,7 +25,7 @@ init = ->
   output.id = "list"
   document.body.appendChild output
   
-  renderer = PIXI.autoDetectRenderer 1024, 1024, null, false, true
+  renderer = PIXI.autoDetectRenderer STAGE.width, STAGE.height, null, false, false
   document.body.appendChild renderer.view
 
   gui = new dat.GUI()
