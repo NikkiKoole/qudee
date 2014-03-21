@@ -7,8 +7,7 @@ watch:
 
 # mangle top names, exclude a few names from mangling
 uglify:
-	node_modules/uglify-js/bin/uglifyjs -mt build/bundle.js  -o build/bundle.min.js -m '$,require,exports'
-
+	node_modules/uglify-js/bin/uglifyjs build/bundle.js  -o build/bundle.min.js -m 
 #TODO: make a simple build that will just build (not watch), for some reason 'browserify -c src/main.coffee > build/bundle.js' work on terminal but not in here. 
 
 
