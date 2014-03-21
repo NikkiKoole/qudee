@@ -1,6 +1,7 @@
 ItemLayer = require './itemlayer'
 WallLayer = require './walllayer'
 AreaLayer = require './arealayer'
+{loadJSONPAssets} = require './jsonploader'
 
 module.exports = class Floorplan extends PIXI.Stage
   instance = null
@@ -18,7 +19,20 @@ module.exports = class Floorplan extends PIXI.Stage
     @addChild @areaLayer
     @addChild @wallLayer
     @addChild @itemLayer
-    
+
+  buildPlan: (plan) ->
+    @destroyData()
+
+    for area in plan.areas
+      @areaLayer.drawArea area
+    for wall in plan.walls
+      @wallLayer.addWall wall.a, wall.b, wall.thickness
+    @wallLayer.drawWalls()
+    for i in plan.items
+      @itemLayer.addItem i.x, i.y, i.width, i.height,
+        i.rotation, i.type, i.assetID
+    loadJSONPAssets plan.assets, => @itemLayer.feedItemsAssets()
+            
   tintItems: (color) ->
     @itemLayer.tintItems(color)
 
@@ -26,19 +40,3 @@ module.exports = class Floorplan extends PIXI.Stage
     @wallLayer.clear()
     @areaLayer.clear()
     @itemLayer.children = []
-
-  feedItemsAssets : =>
-    @itemLayer.feedItemsAssets()
-
-  addItem: (x, y, width, height, rotation, type, assetID) ->
-    @itemLayer.addItem(x, y, width, height, rotation, type, assetID)
-
-  addWall: (a, b, thickness) ->
-    @wallLayer.addWall(a, b, thickness)
-
-  drawWalls: ->
-    @wallLayer.drawWalls()
-
-  drawArea : (area) ->
-    @areaLayer.drawArea(area)
-

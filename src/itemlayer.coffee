@@ -6,6 +6,7 @@ module.exports = class ItemLayer extends PIXI.DisplayObjectContainer
     @tint = @color.replace('#', '0x')
           
   addItem: (x, y, width, height, rotation, type, assetID) ->
+    console.log 'adding'
     sprite = new PIXI.DisplayObjectContainer()
     sprite.assetID = assetID
     sprite.graphicsSize = {width:width, height:height}
@@ -24,6 +25,7 @@ module.exports = class ItemLayer extends PIXI.DisplayObjectContainer
           part.tint = color.replace('#','0x')
           
   feedItemsAssets: ->
+    console.log 'HIYA'
     # this function is called when all assets are loaded and constructed.
     # now give your world items some (layered) assets from the cache.
 
@@ -41,7 +43,7 @@ module.exports = class ItemLayer extends PIXI.DisplayObjectContainer
         sprite.tint = color.replace('#','0x')
         sprite.isTintable = true
       newParent.addChild sprite
-
+    console.log @children.length
     for child in @children
       asset = window.fpAssets[child.assetID]
       color =  asset?.default_color

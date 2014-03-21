@@ -6,27 +6,29 @@ MYDECO_QUERY = "http://mydeco3d.com/ws/search/product?db=component&display=rende
 CDN = 'http://cdn.floorplanner.com/assets/'
 
 module.exports.loadFloorPlan = (url) ->
-  xmlhttp = new XMLHttpRequest()
-  xmlhttp.onreadystatechange = ->
-    if xmlhttp.readyState == 4 and xmlhttp.status == 200
-      if endsWith url, '.xml'
-        parseString xmlhttp.responseText, (err, result) ->
-          constructFloorplanFromFML result
-      else if endsWith url, '.json'
-        constructFloorplanFromRS JSON.parse xmlhttp.responseText
-        
-  xmlhttp.open("GET",url, false)
-  xmlhttp.send()
+  getFloorplanFile url
+
+getFloorplanFile = (url)->
+  console.log url
+  xhr url, (result) ->
+    if endsWith url, '.xml'
+      parseString result, (err, res2) ->
+        constructFloorplanFromFML res2
+    else if endsWith url, '.json'
+      constructFloorplanFromRS JSON.parse result
+    
+xhr = (query, callback) ->
+  req = new XMLHttpRequest()
+  req.onreadystatechange = ->
+    if req.readyState is 4 and req.status is 200
+      callback req.responseText
+  req.open 'GET', query, true
+  req.send()
 
 getJSON = (query, callback) ->
-  xhr = new XMLHttpRequest()
-  xhr.onreadystatechange = ->
-    if xhr.readyState is 4 and xhr.status is 200
-      obj = JSON.parse xhr.responseText
-      callback obj
-  xhr.open 'GET', query, true
-  xhr.send()
-
+  xhr query, (result) ->
+    obj = JSON.parse result
+    callback obj
 
 constructQuery = (components) ->
   query = MYDECO_QUERY
@@ -36,54 +38,45 @@ constructQuery = (components) ->
   else query += "&id=" + components
   query
 
-
-
 constructFloorplanFromRS = (rs) ->
-  scene = Floorplan.get()
-  scene.destroyData()
-   
-  plan = rs.model.plan
-  for k,wall of plan.walls
+  plan = {areas:[], walls:[]}
+  rsplan = rs.model.plan
+  for k,wall of rsplan.walls
     thickness = wall.thickness
-    a = plan.points[wall.indices[0]]
-    b = plan.points[wall.indices[1]]
-    scene.addWall {x:parseInt(a[0]), y:parseInt(a[1]*-1)},
-                  {x:parseInt(b[0]), y:parseInt(b[1]*-1)}, thickness+2
+    a = rsplan.points[wall.indices[0]]
+    b = rsplan.points[wall.indices[1]]
+    p1 = {x:parseInt(a[0]), y:parseInt(a[1]*-1)}
+    p2 = {x:parseInt(b[0]), y:parseInt(b[1]*-1)}
+    plan.walls.push {a:p1, b:p2, thickness:thickness+2}
 
-  scene.drawWalls()
-  
   for k,area of plan.areas
     arr = []
     for pIndex in area.indices
       p = plan.points[pIndex]
       arr.push {x:p[0], y:p[1]*-1}
-    scene.drawArea arr
-    
+    plan.areas.push arr
 
-  query = constructQuery rs.model.components
+  # query = constructQuery rs.model.components
+  # onRSAssetsLoaded = () =>
+  #   for k,v of PIXI.TextureCache
+  #     console.log k,v
+  #     sprite =  new PIXI.Sprite.fromImage(v)
+  #     if sprite then console.log sprite
+  #     console.log scene
+  #     scene.assetContainer.addChild(sprite)
 
-  onRSAssetsLoaded = () =>
-    for k,v of PIXI.TextureCache
-      console.log k,v
-      sprite =  new PIXI.Sprite.fromImage(v)
-      if sprite then console.log sprite
-      console.log scene
-      scene.assetContainer.addChild(sprite)
-
-  getJSON query, (data) -> 
-    urls = []
-    for k, v of data.products when v isnt null
-      urls.push v.renders[0].top
-    loader = new PIXI.AssetLoader(urls, true)
-    loader.onComplete = onRSAssetsLoaded
-    loader.load()
-
+  # getJSON query, (data) ->
+  #   urls = []
+  #   for k, v of data.products when v isnt null
+  #     urls.push v.renders[0].top
+  #   loader = new PIXI.AssetLoader(urls, true)
+  #   loader.onComplete = onRSAssetsLoaded
+  #   loader.load()
+  Floorplan.get().buildPlan plan
   
 
 constructFloorplanFromFML = (fml) ->
   MULTIPLIER = 100
-  scene = Floorplan.get()
-  scene.destroyData()
   root = null
   if fml.hasOwnProperty 'design' # the normal one
     root = fml.design
@@ -92,11 +85,11 @@ constructFloorplanFromFML = (fml) ->
   else
     console.log 'unknown', fml
 
-#  console.log root
   lines = root.lines[0].line
   areas = root.areas[0].area
   assets = root.assets[0].asset
   objects = root.objects[0].object
+  plan = {assets:[], areas:[], walls:[], items:[]}
   
   for area in areas
     outPoints = []
@@ -105,14 +98,13 @@ constructFloorplanFromFML = (fml) ->
       [x1, y1, z1, x2, y2, z2] = pointPair.split(" ")
       outPoints.push {x:x1 * MULTIPLIER, y:y1 * MULTIPLIER}
       outPoints.push {x:x2 * MULTIPLIER, y:y2 * MULTIPLIER}
-    scene.drawArea outPoints
-
+    plan.areas.push outPoints
   for line in lines
-    if line.type[0] is 'default_wall'#'normal_wall'
+    if line.type[0] is 'default_wall' #'normal_wall'
       [x1, y1, z1, x2, y2, z2] = line.points[0].split(" ")
       a = {x:parseInt(x1 * MULTIPLIER), y:parseInt(y1 * MULTIPLIER)}
       b = {x:parseInt(x2 * MULTIPLIER), y:parseInt(y2 * MULTIPLIER)}
-      scene.addWall a, b, line.thickness[0] * MULTIPLIER
+      plan.walls.push {a:a, b:b, thickness:line.thickness[0] * MULTIPLIER}
     else
       console.log "#{line.type[0]} not drawn."
 
@@ -134,22 +126,24 @@ constructFloorplanFromFML = (fml) ->
                  parseInt(data.mirrored?[1]),
                  parseInt(data.mirrored?[2])] or [0, 0, 0]
 
-    scene.addItem(x, y, width, height, rotation, data.type, data.id)
+    item =
+      x:x, y:y, width:width, height:height, rotation:rotation,
+      type:data.type, assetID:data.id
 
+    plan.items.push item
 
   assetURLS = []
   for asset in assets
-    #console.log asset
     if endsWith asset.url2d[0], 'flz'
       url = CDN + asset.url2d[0]
         .replace('flz/', 'jsonp'+'/')
         .replace('.flz', '.jsonp')
-      assetURLS.push url
+      plan.assets.push url
     else
       console.log "not handling file #{asset.url2d[0]} yet"
-  loadJSONPAssets assetURLS, scene.feedItemsAssets
-  scene.drawWalls()
 
+  Floorplan.get().buildPlan plan
+  console.log 'plan is: ',plan
   console.log "lines: #{lines.length}, areas: #{areas.length}"
 
 endsWith=(str, suffix) ->

@@ -15,7 +15,7 @@ module.exports.loadJSONPAssets = (urlArray, callback) ->
   jsonpCounter = urlArray.length
   urlArray.map constructJSONPAsset
   whenTotallyDone = callback
-  console.log whenTotallyDone
+  #console.log whenTotallyDone
 
 drawAllInCache = ->
   scene = Floorplan.get()
@@ -100,7 +100,8 @@ createShapesForAllColorAssets = ->
         jsonCache = {}
         whenTotallyDone()
         #drawAllInCache()
-        
+  return
+                
 endsWith = (str, suffix) ->
     str.indexOf(suffix, str.length - suffix.length) isnt -1
 
