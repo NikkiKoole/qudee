@@ -1,6 +1,6 @@
 Floorplan = require './floorplan'
 {loadJSONPAssets} = require './jsonploader'
-{createImage} = require './utils'
+{createImage, endsWith} = require './utils'
 
 MYDECO_QUERY = "http://mydeco3d.com/ws/search/product?db=component&display=renders&display=surface_height&display=bounding_box&display=wall_mounted&display=level&display=model"
 CDN = 'http://cdn.floorplanner.com/assets/'
@@ -146,6 +146,4 @@ constructFloorplanFromFML = (fml) ->
   console.log 'plan is: ',plan
   console.log "lines: #{lines.length}, areas: #{areas.length}"
 
-endsWith=(str, suffix) ->
-    str.indexOf(suffix, str.length - suffix.length) isnt -1
 

@@ -2,7 +2,7 @@
 #window['receive_asset'] = (asset) -> console.log 'window receive asset',asset
 
 Floorplan = require './floorplan'
-{maskFlip} = require './utils'
+{maskFlip, endsWith} = require './utils'
 
 imageLoadedCounter = null
 imageCounter = null
@@ -102,6 +102,4 @@ createShapesForAllColorAssets = ->
         #drawAllInCache()
   return
                 
-endsWith = (str, suffix) ->
-    str.indexOf(suffix, str.length - suffix.length) isnt -1
 

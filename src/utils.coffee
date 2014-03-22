@@ -1,4 +1,8 @@
 
+module.exports.endsWith = (str, suffix) ->
+  str.indexOf(suffix, str.length - suffix.length) isnt -1
+
+
 module.exports.maskFlip = (image) ->
   whiteString = '#ffffff'
   blackString = '#000000'
