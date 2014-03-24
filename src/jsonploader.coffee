@@ -1,6 +1,3 @@
-
-#window['receive_asset'] = (asset) -> console.log 'window receive asset',asset
-
 Floorplan = require './floorplan'
 {maskFlip, endsWith} = require './utils'
 
@@ -15,7 +12,6 @@ module.exports.loadJSONPAssets = (urlArray, callback) ->
   jsonpCounter = urlArray.length
   urlArray.map constructJSONPAsset
   whenTotallyDone = callback
-  #console.log whenTotallyDone
 
 drawAllInCache = ->
   scene = Floorplan.get()
@@ -80,7 +76,6 @@ constructJSONPAsset = (url) ->
 createImage = (data, id, onLoad) ->
   image = new Image()
   image.onload = ->
-    #console.log id
     baseTexture = new PIXI.BaseTexture image
     texture = new PIXI.Texture baseTexture
     PIXI.Texture.addTextureToCache texture, id
@@ -95,11 +90,13 @@ createShapesForAllColorAssets = ->
     shapeImage = maskFlip PIXI.TextureCache[k].baseTexture
     createImage shapeImage, k.replace('.color','.shape'), ->
       count += 1
+      console.log count,shapeCount
       if count >= shapeCount
         console.log 'done creating shapes.'
         jsonCache = {}
         whenTotallyDone()
-        #drawAllInCache()
+  if colorKeys.length is 0
+    whenTotallyDone()
   return
                 
 

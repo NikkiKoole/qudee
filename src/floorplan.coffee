@@ -3,6 +3,8 @@ WallLayer = require './walllayer'
 AreaLayer = require './arealayer'
 {loadJSONPAssets} = require './jsonploader'
 
+
+
 module.exports = class Floorplan extends PIXI.Stage
   instance = null
   @get : ->
@@ -31,10 +33,8 @@ module.exports = class Floorplan extends PIXI.Stage
     for i in plan.items
       @itemLayer.addItem i.x, i.y, i.width, i.height,
         i.rotation, i.type, i.assetID
+    
     loadJSONPAssets plan.assets, => @itemLayer.feedItemsAssets()
-            
-  tintItems: (color) ->
-    @itemLayer.tintItems(color)
 
   destroyData: ->
     @wallLayer.clear()
