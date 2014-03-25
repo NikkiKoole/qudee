@@ -17,16 +17,12 @@ module.exports = class View extends PIXI.DisplayObjectContainer
       throw Error 'setViewport only accepts float values between 0 and 1.'
     @vp ={x:x, y:y, width:width, height:height}
   render: (world) =>
-    #does a lot, get data from world and when I see it, i construct it in my view.
-    #create a yellow backdrop
     w = window.innerWidth
     h = window.innerHeight
     @graphics.clear()
     @graphics.beginFill 0xffff00
     vpScaleX = (@vp.width*w)/@width
     vpScaleY = (@vp.height*h)/@height
-    #draw world here
-    # this function returns a child I can add
     w =  world.render(@graphics,
       -(@cx - @width/2),
       -(@cy - @height/2),
@@ -34,3 +30,4 @@ module.exports = class View extends PIXI.DisplayObjectContainer
     @graphics.addChild w
     @graphics.endFill()
     @addChild(@graphics)
+    return

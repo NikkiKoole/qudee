@@ -36,23 +36,24 @@ init = ->
     renderer.resize window.innerWidth, window.innerHeight
  
   gui = new dat.GUI()
-  scene = Floorplan.get()
+  #scene = Floorplan.get()
+  
+  # background = gui.addFolder 'background'
+  # background.addColor(scene, 'backgroundColor').onChange (value) ->
+  #   scene.setBackgroundColor value.replace('#', '0x' )
 
-  background = gui.addFolder 'background'
-  background.addColor(scene, 'backgroundColor').onChange (value) ->
-    scene.setBackgroundColor value.replace('#', '0x' )
+  # wall = gui.addFolder 'walls'
+  # wall.addColor(scene.wallLayer, 'color').onChange (value) ->
+  #   scene.wallLayer.tint = value.replace('#', '0x')
 
-  wall = gui.addFolder 'walls'
-  wall.addColor(scene.wallLayer, 'color').onChange (value) ->
-    scene.wallLayer.tint = value.replace('#', '0x')
+  # areas = gui.addFolder 'areas'
+  # areas.addColor(scene.areaLayer, 'color').onChange (value) ->
+  #   scene.areaLayer.tint = value.replace('#', '0x')
 
-  areas = gui.addFolder 'areas'
-  areas.addColor(scene.areaLayer, 'color').onChange (value) ->
-    scene.areaLayer.tint = value.replace('#', '0x')
+  # items = gui.addFolder 'items'
+  # items.addColor(scene.itemLayer, 'color').onChange (value) ->
+  #   scene.itemLayer.tintItems value
 
-  items = gui.addFolder 'items'
-  items.addColor(scene.itemLayer, 'color').onChange (value) ->
-    scene.itemLayer.tintItems value
 
   world = Floorplan.get()
   view = new View()
@@ -68,8 +69,10 @@ init = ->
   view.hitArea = new PIXI.Rectangle 0, 0, window.innerWidth, window.innerHeight
   mouseIsDown = false
   mouseDownStart = null
+
   view.mouseup = ->
     mouseIsDown = false
+
   view.mousemove = (e) ->
     if mouseIsDown
       p = e.getLocalPosition(view)
@@ -79,10 +82,12 @@ init = ->
       mouseDownStart.y = p.y
       view.move x, y
       view.render(world)
+
   view.mousedown = (e) ->
     mouseIsDown = true
     mouseDownStart = e.getLocalPosition(view)
     console.log e.getLocalPosition(view)
+
   window.move = (x, y) ->
     view.move x, y
     view.render(world)
@@ -96,11 +101,11 @@ init = ->
 
   requestAnimFrame(animate)
 
-# will contain one or more views
+# will contain one or more views (later)
 class Stage extends PIXI.Stage
-  constructor: (view) ->
+  constructor: (@view) ->
     super 0xff0000
-    @addChild view
+    @addChild @view
 
 window.onload = ->
   init()

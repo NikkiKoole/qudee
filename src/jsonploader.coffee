@@ -1,4 +1,4 @@
-Floorplan = require './floorplan'
+gFloorplan = require './floorplan'
 {maskFlip, endsWith} = require './utils'
 
 imageLoadedCounter = null
@@ -27,6 +27,7 @@ drawAllInCache = ->
     if v.under then _addSprite k + '.under'
     if v.color then _addSprite k + '.shape'
     if v.over then _addSprite k + '.over'
+  return
 
 getJSONP = (url, data, callback) ->
   head = document.getElementsByTagName("head")[0]
@@ -34,12 +35,14 @@ getJSONP = (url, data, callback) ->
   newScript.type = 'text/javascript'
   newScript.src = url
   head.appendChild newScript
+  return
 
 onImageLoaded = ->
   imageLoadedCounter += 1
   if imageLoadedCounter >= imageCounter
     console.log 'done loading all assets'
     createShapesForAllColorAssets()
+  return
 
 constructJSONPAsset = (url) ->
   getJSONP url, {}, window.receive_asset = (asset) ->
@@ -72,6 +75,7 @@ constructJSONPAsset = (url) ->
         if v.over
           imageCounter += 1
           createImage v.over, k+".over", onImageLoaded
+      return
 
 createImage = (data, id, onLoad) ->
   image = new Image()
@@ -80,7 +84,9 @@ createImage = (data, id, onLoad) ->
     texture = new PIXI.Texture baseTexture
     PIXI.Texture.addTextureToCache texture, id
     onLoad()
+    return
   image.src = data
+  return
 
 createShapesForAllColorAssets = ->
   colorKeys = (k for k,v of PIXI.TextureCache when endsWith k, '.color')
@@ -95,6 +101,7 @@ createShapesForAllColorAssets = ->
         console.log 'done creating shapes.'
         jsonCache = {}
         whenTotallyDone()
+      return
   if colorKeys.length is 0
     whenTotallyDone()
   return
