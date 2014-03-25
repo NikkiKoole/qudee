@@ -5,15 +5,15 @@ Floorplan = require './floorplan'
 MYDECO_QUERY = "http://mydeco3d.com/ws/search/product?db=component&display=renders&display=surface_height&display=bounding_box&display=wall_mounted&display=level&display=model"
 CDN = 'http://cdn.floorplanner.com/assets/'
 
-module.exports.loadFloorPlan = (url) ->
-  getFloorplanFile url
+module.exports.loadFloorPlan = (url, callback) ->
+  getFloorplanFile url,callback
 
-getFloorplanFile = (url)->
+getFloorplanFile = (url, callback)->
   console.log url
   xhr url, (result) ->
     if endsWith url, '.xml'
       parseString result, (err, res2) ->
-        constructFloorplanFromFML res2
+        constructFloorplanFromFML res2, callback
     else if endsWith url, '.json'
       constructFloorplanFromRS JSON.parse result
     
@@ -75,7 +75,7 @@ constructFloorplanFromRS = (rs) ->
   Floorplan.get().buildPlan plan
   
 
-constructFloorplanFromFML = (fml) ->
+constructFloorplanFromFML = (fml, callback) ->
   MULTIPLIER = 100
   root = null
   if fml.hasOwnProperty 'design' # the normal one
@@ -142,8 +142,8 @@ constructFloorplanFromFML = (fml) ->
     else
       console.log "not handling file #{asset.url2d[0]} yet"
 
-  Floorplan.get().buildPlan plan
+#  Floorplan.get().buildPlan plan
   console.log 'plan is: ',plan
   console.log "lines: #{lines.length}, areas: #{areas.length}"
-
+  callback plan
 
