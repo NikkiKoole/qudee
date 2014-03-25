@@ -27,12 +27,14 @@ module.exports = class ItemLayer
       ItemLayer.offscreen.addChild sprite
     return
     
-  @render: (items, graphics, x, y, scaleX, scaleY, color) ->
+  @render: (items, graphics, x, y, scale, color) ->
     # will not work with drawing graphics, instead will just
     # move some items in offscreen and return a masked displayObject
     for child in ItemLayer.offscreen.children
-      child.position.x = child.originalX + x
-      child.position.y = child.originalY + y
+      child.position.x = (child.originalX + x)*scale
+      child.position.y = (child.originalY + y)*scale
+      child.scale.x = scale
+      child.scale.y = scale
       for part in child.children
         if part.isTintable
           part.tint = color

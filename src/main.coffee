@@ -1,8 +1,10 @@
 Floorplan = require './floorplan'
 {loadFloorPlan} = require './importer'
 View = require './view'
+
 ###
 ###
+
 handleFileSelect = (event) ->
   loadFloorPlan 'data/' + event.target.files[0].name, (plan) ->
     Floorplan.get().buildPlan plan
@@ -61,7 +63,7 @@ init = ->
   view.setSize window.innerWidth,window.innerHeight
   view.setCenter 0,100
 
-  loadFloorPlan 'data/rijksgebouwendienst.xml',(plan) ->
+  loadFloorPlan 'data/nuova.xml',(plan) ->
     Floorplan.get().buildPlan plan
     view.render(world)
       
@@ -70,6 +72,20 @@ init = ->
   mouseIsDown = false
   mouseDownStart = null
 
+  document.body.onkeydown = (e) ->
+    e = e or window.event
+    keycode = event.charCode or event.keyCode
+    if keycode is 90 #Z
+      console.log 'enteren!!'
+      #zoom in (scale word kleiner)
+      scale = view.getScale()
+
+      newScale = scale * 0.5
+      console.log newScale
+      view.setSize window.innerWidth*newScale,window.innerHeight*newScale
+    if keycode is 88  #X
+      #zoom out
+      scale = view.getScale()
   view.mouseup = ->
     mouseIsDown = false
 
@@ -80,7 +96,8 @@ init = ->
       y =  mouseDownStart.y - p.y
       mouseDownStart.x = p.x
       mouseDownStart.y = p.y
-      view.move x, y
+      scale = view.getScale()
+      view.move x/scale, y/scale
       view.render(world)
 
   view.mousedown = (e) ->
@@ -88,9 +105,9 @@ init = ->
     mouseDownStart = e.getLocalPosition(view)
     console.log e.getLocalPosition(view)
 
-  window.move = (x, y) ->
-    view.move x, y
-    view.render(world)
+  #window.move = (x, y) ->
+  #  view.move x, y
+  #  view.render(world)
     
   stage = new Stage(view)
   animate = () ->

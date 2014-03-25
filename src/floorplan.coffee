@@ -9,10 +9,10 @@ module.exports = class Floorplan
   @get : ->
     instance ?= new Floorplan()
       
-  render: (graphics, x, y, scaleX, scaleY)->
-    AreaLayer.render(@plan.areas, graphics, x, y, scaleX, scaleY, 0x00ffff)
-    WallLayer.render(@plan.corners, graphics, x, y, scaleX, scaleY, 0x00ff00)
-    ItemLayer.render(@plan.items, graphics, x, y, scaleX, scaleY, 0xaa0000)
+  render: (graphics, x, y, scale)->
+    AreaLayer.render(@plan.areas, graphics, x, y, scale, 0x00ffff)
+    WallLayer.render(@plan.corners, graphics, x, y, scale, 0x00ff00)
+    ItemLayer.render(@plan.items, graphics, x, y, scale, 0xaa0000)
 
   buildPlan: (plan) ->
     @plan = plan
