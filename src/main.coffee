@@ -105,10 +105,6 @@ init = ->
     mouseDownStart = e.getLocalPosition(view)
     console.log e.getLocalPosition(view)
 
-  #window.move = (x, y) ->
-  #  view.move x, y
-  #  view.render(world)
-    
   stage = new Stage(view)
   animate = () ->
     stats.begin()

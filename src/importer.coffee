@@ -73,60 +73,53 @@ constructFloorplanFromRS = (rs) ->
   #   loader.onComplete = onRSAssetsLoaded
   #   loader.load()
   Floorplan.get().buildPlan plan
-  
+
+getFMLRoot = (fml) ->
+  if fml.hasOwnProperty 'design' # the normal one
+    return fml.design
+  else if fml.hasOwnProperty 'project' # the portal one
+    return fml.project.floors[0].floor[0].designs[0].design[0]
 
 constructFloorplanFromFML = (fml, callback) ->
   MULTIPLIER = 100
-  root = null
-  if fml.hasOwnProperty 'design' # the normal one
-    root = fml.design
-  else if fml.hasOwnProperty 'project' # the portal one
-    root = fml.project.floors[0].floor[0].designs[0].design[0]
-  else
-    console.log 'unknown', fml
-
+  root = getFMLRoot fml
   lines = root.lines[0].line
   areas = root.areas[0].area
   assets = root.assets[0].asset
   objects = root.objects[0].object
-  plan = {assets:[], areas:[], walls:[], items:[], dots:[]}
+  plan = {assets:[], areas:[], walls:[], curvedWalls:[],  items:[]}
   
   for area in areas
     outPoints = []
-    pointGroup = area.points[0].split(",")
+    pointGroup = area.points[0].split(',')
+    console.log 'refid area '+area.asset?[0]['$']['refid']
     for pointPair in pointGroup
-      [x1, y1, z1, x2, y2, z2] = pointPair.split(" ")
+      [x1, y1, z1, x2, y2, z2] = pointPair.split(' ')
       outPoints.push {x:x1 * MULTIPLIER, y:y1 * MULTIPLIER}
       outPoints.push {x:x2 * MULTIPLIER, y:y2 * MULTIPLIER}
     plan.areas.push outPoints
+
   for line in lines
-    if line.type[0] is 'default_wall' #'normal_wall'
-      length = line.points[0].split(" ").length
-      #console.log length
-      if length is 11
-        firstHalf = line.points[0].split(",")[0]
-        console.log firstHalf.length
-        [x1, y1, z1, x2, y2, z2] = firstHalf.split(" ")
+    if line.type[0] #is 'default_wall' #'normal_wall'
+      # TODO: rename values
+      values = (line.points[0].split(',')[0]).split(' ')
+      if values.length is 6 # these lines aren't curved.
+        [x1, y1, z1, x2, y2, z2] = values
         a = {x:parseInt(x1 * MULTIPLIER), y:parseInt(y1 * MULTIPLIER)}
         b = {x:parseInt(x2 * MULTIPLIER), y:parseInt(y2 * MULTIPLIER)}
         plan.walls.push {a:a, b:b, thickness:line.thickness[0] * MULTIPLIER}
-      else
-        console.log "length: #{length}"
-        console.log line.points[0]
-        firstHalf = line.points[0].split(",")[0]
-        console.log firstHalf.length
-        # TODO: I think I want to add 'dots' to all positions
-        # and see the result.
-        # after that I need to locate the control points of the (bezier)curves
-        [x1, y1, z1, x2, y2, z2] = line.points[0].split(" ")
+      else if values.length is 9 #these lines are curved.
+        [x1, y1, z1, x2, y2, z2, x3, y3, z3] = values
         a = {x:parseInt(x1 * MULTIPLIER), y:parseInt(y1 * MULTIPLIER)}
         b = {x:parseInt(x2 * MULTIPLIER), y:parseInt(y2 * MULTIPLIER)}
-        plan.dots.push a
-        plan.dots.push b
-   
+        c = {x:parseInt(x3 * MULTIPLIER), y:parseInt(y3 * MULTIPLIER)}
+        plan.curvedWalls.push
+          start:a, end:b, control:c,
+          thickness:line.thickness[0] * MULTIPLIER
     else
       console.log "#{line.type[0]} not drawn."
       console.log line.points[0]
+
   if objects
     for object in objects
       data =
@@ -163,7 +156,6 @@ constructFloorplanFromFML = (fml, callback) ->
       else
         console.log "not handling file #{asset.url2d[0]} yet"
 
-#  Floorplan.get().buildPlan plan
   console.log 'plan is: ',plan
   console.log "lines: #{lines.length}, areas: #{areas.length}"
   callback plan
