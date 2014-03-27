@@ -96,7 +96,7 @@ createShapesForAllColorAssets = ->
     shapeImage = maskFlip PIXI.TextureCache[k].baseTexture
     createImage shapeImage, k.replace('.color','.shape'), ->
       count += 1
-      console.log count,shapeCount
+     # console.log count,shapeCount
       if count >= shapeCount
         console.log 'done creating shapes.'
         jsonCache = {}

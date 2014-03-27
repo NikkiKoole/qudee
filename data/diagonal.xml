@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <created-at type="datetime">2014-03-25T20:24:12-04:00</created-at>
+  <description></description>
+  <element-library-id type="integer">1</element-library-id>
+  <enable-autosave type="boolean">false</enable-autosave>
+  <exported-at type="datetime"></exported-at>
+  <external-identifier></external-identifier>
+  <grid-cell-size type="decimal"></grid-cell-size>
+  <grid-sub-cell-size type="decimal"></grid-sub-cell-size>
+  <id type="integer">28246973</id>
+  <name>New floorplan</name>
+  <original-project-id type="integer"></original-project-id>
+  <project-url>tsq4r8</project-url>
+  <public type="boolean">false</public>
+  <texture-library-id type="integer">1</texture-library-id>
+  <updated-at type="datetime">2014-03-25T20:25:17-04:00</updated-at>
+  <user-id type="integer">26778237</user-id>
+  <wall-thickness type="decimal">0.25</wall-thickness>
+  <floors type="array">
+    <floor>
+      <id type="integer">33705371</id>
+      <name>Ground floor</name>
+      <level type="integer">0</level>
+      <height type="decimal">2.8</height>
+      <created-at>2014-03-25 20:24:12 -0400</created-at>
+      <updated-at>2014-03-25 20:25:17 -0400</updated-at>
+      <designs type="array">
+
+<design>
+<id type="integer">34096005</id>
+<name>diagonal</name>
+<project-id>28246973</project-id>
+<floor-id>33705371</floor-id>
+<version-2d>359</version-2d>
+<version-3d>153</version-3d>
+<units>meters</units>
+<assets type="array"/>
+<objects type="array"/>
+<areas type="array">
+<area>
+<layer>0</layer>
+<type>generated_area</type>
+<points>2.13 5.96 0 8.25 5.96 0,8.25 5.96 0 11.65 -0.07 0,11.65 -0.07 0 6.46 0.02 0,6.46 0.02 0 2.13 5.96 0</points>
+<color>#d4e2f0</color>
+</area>
+</areas>
+<lines type="array">
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>1.684 6.089 0 8.55 6.089 0,1.684 6.089 2.8 8.55 6.089 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>8.55 6.089 0 12.099 -0.207 0,8.55 6.089 2.8 12.099 -0.207 2.8</points>
+<thickness>0.65</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>12.099 -0.207 0 6.192 -0.103 0,12.099 -0.207 2.8 6.192 -0.103 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>6.192 -0.103 0 1.684 6.089 0,6.192 -0.103 2.8 1.684 6.089 2.8</points>
+<thickness>0.57</thickness>
+<color>#000000</color>
+</line>
+</lines>
+</design>
+      </designs>
+    </floor>
+  </floors>
+</project>

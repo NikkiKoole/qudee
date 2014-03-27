@@ -89,7 +89,7 @@ constructFloorplanFromFML = (fml, callback) ->
   areas = root.areas[0].area
   assets = root.assets[0].asset
   objects = root.objects[0].object
-  plan = {assets:[], areas:[], walls:[], items:[]}
+  plan = {assets:[], areas:[], walls:[], items:[], dots:[]}
   
   for area in areas
     outPoints = []
@@ -101,46 +101,67 @@ constructFloorplanFromFML = (fml, callback) ->
     plan.areas.push outPoints
   for line in lines
     if line.type[0] is 'default_wall' #'normal_wall'
-      [x1, y1, z1, x2, y2, z2] = line.points[0].split(" ")
-      a = {x:parseInt(x1 * MULTIPLIER), y:parseInt(y1 * MULTIPLIER)}
-      b = {x:parseInt(x2 * MULTIPLIER), y:parseInt(y2 * MULTIPLIER)}
-      plan.walls.push {a:a, b:b, thickness:line.thickness[0] * MULTIPLIER}
+      length = line.points[0].split(" ").length
+      #console.log length
+      if length is 11
+        firstHalf = line.points[0].split(",")[0]
+        console.log firstHalf.length
+        [x1, y1, z1, x2, y2, z2] = firstHalf.split(" ")
+        a = {x:parseInt(x1 * MULTIPLIER), y:parseInt(y1 * MULTIPLIER)}
+        b = {x:parseInt(x2 * MULTIPLIER), y:parseInt(y2 * MULTIPLIER)}
+        plan.walls.push {a:a, b:b, thickness:line.thickness[0] * MULTIPLIER}
+      else
+        console.log "length: #{length}"
+        console.log line.points[0]
+        firstHalf = line.points[0].split(",")[0]
+        console.log firstHalf.length
+        # TODO: I think I want to add 'dots' to all positions
+        # and see the result.
+        # after that I need to locate the control points of the (bezier)curves
+        [x1, y1, z1, x2, y2, z2] = line.points[0].split(" ")
+        a = {x:parseInt(x1 * MULTIPLIER), y:parseInt(y1 * MULTIPLIER)}
+        b = {x:parseInt(x2 * MULTIPLIER), y:parseInt(y2 * MULTIPLIER)}
+        plan.dots.push a
+        plan.dots.push b
+   
     else
       console.log "#{line.type[0]} not drawn."
+      console.log line.points[0]
+  if objects
+    for object in objects
+      data =
+        id:object.asset?[0]['$']['refid']
+        type:object.type?[0]
+        mirrored:object.mirrored?[0].split(' ') or [0, 0,0]
+        points:object.points?[0].split(' ')
+        rotation:object.rotation?[0].split(' ')
+        size:object.size?[0].split(' ')
+      
+      x = parseInt(data.points?[0] * MULTIPLIER)
+      y = parseInt(data.points?[1] * MULTIPLIER)
+      width = parseInt(data.size?[0] * MULTIPLIER) or 0
+      height = parseInt(data.size?[1] * MULTIPLIER) or 0
+      rotation = parseInt(data.rotation?[2]) or 0
+      mirrored = [ parseInt(data.mirrored?[0]),
+                   parseInt(data.mirrored?[1]),
+                   parseInt(data.mirrored?[2])] or [0, 0, 0]
 
-  for object in objects
-    data =
-      id:object.asset?[0]['$']['refid']
-      type:object.type?[0]
-      mirrored:object.mirrored?[0].split(' ') or [0, 0,0]
-      points:object.points?[0].split(' ')
-      rotation:object.rotation?[0].split(' ')
-      size:object.size?[0].split(' ')
-    
-    x = parseInt(data.points?[0] * MULTIPLIER)
-    y = parseInt(data.points?[1] * MULTIPLIER)
-    width = parseInt(data.size?[0] * MULTIPLIER) or 0
-    height = parseInt(data.size?[1] * MULTIPLIER) or 0
-    rotation = parseInt(data.rotation?[2]) or 0
-    mirrored = [ parseInt(data.mirrored?[0]),
-                 parseInt(data.mirrored?[1]),
-                 parseInt(data.mirrored?[2])] or [0, 0, 0]
+      item =
+        x:x, y:y, width:width, height:height, rotation:rotation,
+        type:data.type, assetID:data.id
 
-    item =
-      x:x, y:y, width:width, height:height, rotation:rotation,
-      type:data.type, assetID:data.id
-
-    plan.items.push item
+      plan.items.push item
 
   assetURLS = []
-  for asset in assets
-    if endsWith asset.url2d[0], 'flz'
-      url = CDN + asset.url2d[0]
-        .replace('flz/', 'jsonp'+'/')
-        .replace('.flz', '.jsonp')
-      plan.assets.push url
-    else
-      console.log "not handling file #{asset.url2d[0]} yet"
+  if assets
+    for asset in assets
+      if endsWith asset.url2d[0], 'flz'
+        url = CDN + asset.url2d[0]
+          .replace('flz/', 'jsonp'+'/')
+          .replace('.flz', '.jsonp')
+        plan.assets.push url
+      else
+        console.log "not handling file #{asset.url2d[0]} yet"
 
 #  Floorplan.get().buildPlan plan
   console.log 'plan is: ',plan

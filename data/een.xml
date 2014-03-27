@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <created-at type="datetime">2014-03-25T20:02:06-04:00</created-at>
+  <description></description>
+  <element-library-id type="integer">1</element-library-id>
+  <enable-autosave type="boolean">true</enable-autosave>
+  <exported-at type="datetime">2014-03-25T20:04:07-04:00</exported-at>
+  <external-identifier></external-identifier>
+  <grid-cell-size type="decimal"></grid-cell-size>
+  <grid-sub-cell-size type="decimal"></grid-sub-cell-size>
+  <id type="integer">28246857</id>
+  <name>New floorplan</name>
+  <original-project-id type="integer"></original-project-id>
+  <project-url>nhxpuw</project-url>
+  <public type="boolean">false</public>
+  <texture-library-id type="integer">1</texture-library-id>
+  <updated-at type="datetime">2014-03-25T20:06:28-04:00</updated-at>
+  <user-id type="integer">26778237</user-id>
+  <wall-thickness type="decimal">0.25</wall-thickness>
+  <floors type="array">
+    <floor>
+      <id type="integer">33705180</id>
+      <name>Ground floor</name>
+      <level type="integer">0</level>
+      <height type="decimal">2.8</height>
+      <created-at>2014-03-25 20:02:06 -0400</created-at>
+      <updated-at>2014-03-25 20:06:28 -0400</updated-at>
+      <designs type="array">
+
+<design>
+<id type="integer">34095873</id>
+<name>een</name>
+<project-id>28246857</project-id>
+<floor-id>33705180</floor-id>
+<version-2d>359</version-2d>
+<version-3d>153</version-3d>
+<units>meters</units>
+<assets type="array"/>
+<objects type="array"/>
+<areas type="array">
+<area>
+<layer>0</layer>
+<type>generated_area</type>
+<points>3.31 -1.48 0 8.14 -1.48 0,8.14 -1.48 0 8.14 7.43 0,8.14 7.43 0 7.37 7.71 0,7.37 7.71 0 6.58 7.97 0,6.58 7.97 0 5.86 8.18 0,5.86 8.18 0 5.21 8.34 0,5.21 8.34 0 4.63 8.45 0,4.63 8.45 0 4.12 8.51 0,4.12 8.51 0 3.69 8.51 0,3.69 8.51 0 3.32 8.47 0,3.32 8.47 0 3.03 8.38 0,3.03 8.38 0 2.81 8.25 0,2.81 8.25 0 2.66 8.08 0,2.66 8.08 0 2.56 7.87 0,2.56 7.87 0 2.52 7.6 0,2.52 7.6 0 2.54 7.27 0,2.54 7.27 0 2.63 6.89 0,2.63 6.89 0 2.78 6.44 0,2.78 6.44 0 3.01 5.95 0,3.01 5.95 0 3.31 5.37 0,3.31 5.37 0 3.31 -1.48 0</points>
+<color>#fcc778</color>
+</area>
+</areas>
+<lines type="array">
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>3.187 -1.606 0 8.265 -1.606 0,3.187 -1.606 2.8 8.265 -1.606 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>8.265 -1.606 0 8.265 7.513 0,8.265 -1.606 2.8 8.265 7.513 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>8.265 7.513 0 3.187 5.337 0 0.234 10.571 0,8.265 7.513 2.8 3.187 5.337 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>3.187 5.337 0 3.187 -1.606 0,3.187 5.337 2.8 3.187 -1.606 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+</lines>
+</design>
+
+<design>
+<id type="integer">34095836</id>
+<name>twee</name>
+<project-id>28246857</project-id>
+<floor-id>33705180</floor-id>
+<version-2d>359</version-2d>
+<version-3d>153</version-3d>
+<units>meters</units>
+<assets type="array">
+<asset id="l14">
+<url2d>linears/2d/2_losse_muur.png</url2d>
+<url3d/>
+<thickness>0.07</thickness>
+<color>#000000</color>
+</asset>
+</assets>
+<objects type="array"/>
+<areas type="array">
+<area>
+<layer>0</layer>
+<type>generated_area</type>
+<points>3.31 -1.48 0 8.14 -1.48 0,8.14 -1.48 0 8.14 7.43 0,8.14 7.43 0 7.37 7.71 0,7.37 7.71 0 6.58 7.97 0,6.58 7.97 0 5.86 8.18 0,5.86 8.18 0 5.21 8.34 0,5.21 8.34 0 4.63 8.45 0,4.63 8.45 0 4.12 8.51 0,4.12 8.51 0 3.69 8.51 0,3.69 8.51 0 3.32 8.47 0,3.32 8.47 0 3.03 8.38 0,3.03 8.38 0 2.81 8.25 0,2.81 8.25 0 2.66 8.08 0,2.66 8.08 0 2.56 7.87 0,2.56 7.87 0 2.52 7.6 0,2.52 7.6 0 2.54 7.27 0,2.54 7.27 0 2.63 6.89 0,2.63 6.89 0 2.78 6.44 0,2.78 6.44 0 3.01 5.95 0,3.01 5.95 0 3.31 5.37 0,3.31 5.37 0 3.31 -1.48 0</points>
+<color>#fcc778</color>
+</area>
+</areas>
+<lines type="array">
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>3.187 -1.606 0 8.265 -1.606 0,3.187 -1.606 2.8 8.265 -1.606 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>8.265 -1.606 0 8.265 7.513 0,8.265 -1.606 2.8 8.265 7.513 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>8.265 7.513 0 3.187 5.337 0 0.234 10.571 0,8.265 7.513 2.8 3.187 5.337 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l1"/>
+<type>default_wall</type>
+<points>3.187 5.337 0 3.187 -1.606 0,3.187 5.337 2.8 3.187 -1.606 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>11.464 -1.023 0 16.646 -0.194 0,11.464 -1.023 2.8 16.646 -0.194 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>16.646 -0.194 0 11.723 1.205 0,16.646 -0.194 2.8 11.723 1.205 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>11.723 1.205 0 11.853 4.495 0,11.723 1.205 2.8 11.853 4.495 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>11.853 4.495 0 19.807 0.687 0,11.853 4.495 2.8 19.807 0.687 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>19.807 0.687 0 12.993 6.801 0,19.807 0.687 2.8 12.993 6.801 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>12.993 6.801 0 10.014 5.842 0,12.993 6.801 2.8 10.014 5.842 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>10.014 5.842 0 10.453 -0.013 0,10.014 5.842 2.8 10.453 -0.013 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>10.453 -0.013 0 11.464 -1.023 0,10.453 -0.013 2.8 11.464 -1.023 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+<line>
+<asset refid="l14"/>
+<type>normal_wall</type>
+<points>11.464 -1.023 0 11.464 -0.738 0,11.464 -1.023 2.8 11.464 -0.738 2.8</points>
+<thickness>0.25</thickness>
+<color>#000000</color>
+</line>
+</lines>
+</design>
+      </designs>
+    </floor>
+  </floors>
+</project>

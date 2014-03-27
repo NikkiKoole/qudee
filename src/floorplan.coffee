@@ -13,6 +13,7 @@ module.exports = class Floorplan
     AreaLayer.render(@plan.areas, graphics, x, y, scale, 0x00ffff)
     WallLayer.render(@plan.corners, graphics, x, y, scale, 0x00ff00)
     ItemLayer.render(@plan.items, graphics, x, y, scale, 0xaa0000)
+    @renderDots(@plan.dots,graphics, x,y, scale)
 
   buildPlan: (plan) ->
     @plan = plan
@@ -24,3 +25,10 @@ module.exports = class Floorplan
 
     loadJSONPAssets plan.assets, -> ItemLayer.addSpritesToItems()
     @plan
+
+  renderDots: (dots, graphics, x, y, scale) ->
+    for dot in dots
+      graphics.beginFill 0xffaaff
+      graphics.drawRect (x+dot.x)*scale, (y+dot.y)*scale, 20, 20
+      graphics.endFill()
+    graphics

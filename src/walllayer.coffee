@@ -1,4 +1,10 @@
 module.exports = class WallLayer
+# The rendering of the walls happen around corners.
+# Every corner is rendered by drawing all walls attached to it,
+# all walls attached get drawn in pairs with all other walls attached.
+# this ensures line connections being drawn for every combination,
+# it's also highly inefficient ;) and does work double/triple.
+# but it's super simple.
 
   @render: (corners, graphics, x, y, scale, color) ->
     graphics.beginFill 0,0

@@ -2,8 +2,8 @@ Floorplan = require './floorplan'
 {loadFloorPlan} = require './importer'
 View = require './view'
 
-###
-###
+# ###
+# ###
 
 handleFileSelect = (event) ->
   loadFloorPlan 'data/' + event.target.files[0].name, (plan) ->
@@ -63,7 +63,7 @@ init = ->
   view.setSize window.innerWidth,window.innerHeight
   view.setCenter 0,100
 
-  loadFloorPlan 'data/nuova.xml',(plan) ->
+  loadFloorPlan 'data/een.xml',(plan) ->
     Floorplan.get().buildPlan plan
     view.render(world)
       
