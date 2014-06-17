@@ -9,7 +9,6 @@ module.exports.loadFloorPlan = (url, callback) ->
   getFloorplanFile url,callback
 
 getFloorplanFile = (url, callback)->
-#    console.log url
     xhr url, (result) ->
         if endsWith url, '.xml'
             parseString result, (err, res2) ->
@@ -114,8 +113,7 @@ constructFloorplanFromFML = (fml, callback) ->
                 b = {x:parseInt(x2 * MULTIPLIER), y:parseInt(y2 * MULTIPLIER)}
                 c = {x:parseInt(x3 * MULTIPLIER), y:parseInt(y3 * MULTIPLIER)}
                 plan.curvedWalls.push
-                    start:a, end:b, control:c,
-                    thickness:line.thickness[0] * MULTIPLIER
+                    start:a, end:b, control:c, thickness:line.thickness[0] * MULTIPLIER
         else
             console.log "#{line.type[0]} not drawn."
             console.log line.points[0]
@@ -139,10 +137,7 @@ constructFloorplanFromFML = (fml, callback) ->
                          parseInt(data.mirrored?[1]),
                          parseInt(data.mirrored?[2])] or [0, 0, 0]
 
-            item =
-                x:x, y:y, width:width, height:height, rotation:rotation,
-                type:data.type, assetID:data.id
-
+            item = x:x, y:y, width:width, height:height, rotation:rotation, type:data.type, assetID:data.id
             plan.items.push item
 
     assetURLS = []
@@ -152,9 +147,9 @@ constructFloorplanFromFML = (fml, callback) ->
                 url = CDN + asset.url2d[0]
                     .replace('flz/', 'jsonp'+'/')
                     .replace('.flz', '.jsonp')
-        plan.assets.push url
-    else
-        console.log "not handling file #{asset.url2d[0]} yet"
+                plan.assets.push url
+            else
+                console.log "not handling file #{asset.url2d[0]} yet"
 
     console.log 'plan is: ',plan
     console.log "lines: #{lines.length}, areas: #{areas.length}"

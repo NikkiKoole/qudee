@@ -8,12 +8,30 @@ module.exports = class Floorplan
     instance = null
     @get : ->
         instance ?= new Floorplan()
-          
-    render: (graphics, x, y, scale)->
-        AreaLayer.render(@plan.areas, graphics, x, y, scale, 0x00ffff)
-        WallLayer.render(@plan.corners, graphics, x, y, scale, 0x00ff00)
-        WallLayer.renderCurved(@plan.curvedWalls, graphics, x, y, scale, 0x00ff00)
-        ItemLayer.render(@plan.items, graphics, x, y, scale, 0xaa0000)
+
+    constructor: ->
+        @container = new PIXI.DisplayObjectContainer()
+        @areas = new AreaLayer()
+        @walls = new WallLayer()
+        @items = new ItemLayer()
+        @container.addChild @areas
+        @container.addChild @walls
+        @container.addChild @items
+        
+        #console.log @container
+        # these 3 layers are displayObjectContainers.
+        # walls and areas are of type Graphic and items of type DOC.
+        # 
+    transform: (x, y, scale) ->
+        @container.position = {x:x, y:y}
+        @container.scale = {x:scale, y:scale}
+        
+    render: ( x, y, scale) ->
+        @areas.render(@plan.areas)
+        @walls.render(@plan.corners, @plan.curvedWalls)
+        @items.render(@plan.items)
+        @container.position = {x:x, y:y}
+        @container.scale = {x:scale, y:scale}
 
     buildPlan: (plan) ->
         @plan = plan
@@ -21,7 +39,5 @@ module.exports = class Floorplan
         for wall in plan.walls
             graph.addWall wall.a, wall.b, wall.thickness
         plan.corners = graph.getCorners()
-        ItemLayer.addItems(plan.items)
-
-        loadJSONPAssets plan.assets, -> ItemLayer.addSpritesToItems()
+        loadJSONPAssets plan.assets, => @items.addSpritesToItems()
         @plan

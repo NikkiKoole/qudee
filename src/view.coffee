@@ -7,6 +7,8 @@ module.exports = class View extends PIXI.DisplayObjectContainer
         super()
         @vp = {x:x, y:y, width:width, height:height}
         @graphics = new PIXI.Graphics()
+        @addChild @graphics
+        @world = null
 
     
 
@@ -24,8 +26,8 @@ module.exports = class View extends PIXI.DisplayObjectContainer
         @vp ={x:x, y:y, width:width, height:height}
 
     getScale: ->
-        vpScaleX = (@vp.width*window.innerWidth)/@width
-        vpScaleY = (@vp.height*window.innerHeight)/@height
+        vpScaleX = (@vp.width * window.innerWidth) / @width
+        vpScaleY = (@vp.height * window.innerHeight) / @height
         scale = Math.min vpScaleX, vpScaleY
 
     getMask: ->
@@ -38,22 +40,18 @@ module.exports = class View extends PIXI.DisplayObjectContainer
 
     
     render: (world) =>
-        scale = @getScale()
-        @graphics.clear()
-        @graphics.beginFill 0xffffff * Math.random()
-        @graphics.drawRect(@vp.x* @width, @vp.y * @height, @width*scale, @height*scale)
         
-        #console.log @vp.x* @width, @vp.y * @height
+        if world isnt @world
+            @world = world
+            @world.render(0,0, 1)
+            @graphics.addChild @world.container
+
+        @world.transform -@cx, -@cy, 1
         
-        w =  world.render(@graphics,
-          -(@cx - @width/2),
-          -(@cy - @height/2),
-          scale)
-        
-        @graphics.addChild w
-        @graphics.endFill()
-        #@graphics.mask = @getMask()
-        #@graphics.addChild @getMask()
-        #@addChild(@graphics.mask)
-        @addChild(@graphics)
+        # #@graphics.addChild w
+        # @graphics.endFill()
+        # #@graphics.mask = @getMask()
+        # #@graphics.addChild @getMask()
+        # #@addChild(@graphics.mask)
+        # @addChild(@graphics)
         return

@@ -40,7 +40,7 @@ getJSONP = (url, data, callback) ->
 onImageLoaded = ->
     imageLoadedCounter += 1
     if imageLoadedCounter >= imageCounter
-        console.log 'done loading all assets'
+        console.log 'done loading all images'
         createShapesForAllColorAssets()
     return
 
@@ -50,7 +50,7 @@ constructJSONPAsset = (url) ->
         jsonpCounter -= 1
 
         if jsonpCounter <= 0
-            console.log 'done with loading jsonp.'
+            console.log 'done loading jsonp.'
             for k,v of jsonCache
                 data =
                   id:k
@@ -89,18 +89,18 @@ createImage = (data, id, onLoad) ->
     return
 
 createShapesForAllColorAssets = ->
-    colorKeys = (k for k,v of PIXI.TextureCache when endsWith k, '.color')
+    colorKeys = (k for k,v of PIXI.TextureCache when endsWith(k, '.color'))
     shapeCount = colorKeys.length
     count = 0
     for k in colorKeys
         shapeImage = maskFlip PIXI.TextureCache[k].baseTexture
         createImage shapeImage, k.replace('.color','.shape'), ->
             count += 1
+            console.log count, shapeCount
             if count >= shapeCount
-                console.log 'done creating shapes.'
                 jsonCache = {}
                 whenTotallyDone()
-          return
+                return
     if colorKeys.length is 0
         whenTotallyDone()
     return

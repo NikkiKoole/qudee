@@ -1,4 +1,4 @@
-module.exports = class WallLayer
+module.exports = class WallLayer extends PIXI.Graphics
     # The rendering of the walls happen around corners.
     # Every corner is rendered by drawing all walls attached to it,
     # all walls attached get drawn in pairs with all other walls attached.
@@ -11,14 +11,27 @@ module.exports = class WallLayer
     # to connect them up properly I'll need to draw the first and last
     # segment of the curve connected to other edges on that coord.
 
-    @renderCurved: (curves, graphics, x, y, scale, color) ->
-        graphics.beginFill 0,0
-        graphics.lineStyle 10, color
+    constructor: ->
+        super()
+
+    render: (corners, curves) ->
+        @beginFill 0,0
+        @lineStyle 10, 0x000000
+        for corner in corners
+            for edge1 in corner.edges
+                for edge2 in corner.edges
+                    if edge1 isnt edge2
+                        @moveTo edge1.getOther(corner).x, edge1.getOther(corner).y
+                        @setLineThickness edge1.thickness, @, 0x000000
+                        @lineTo corner.x, corner.y
+                        @setLineThickness edge2.thickness, @, 0x000000
+                        @lineTo edge2.getOther(corner).x, edge2.getOther(corner).y
+
         for curve in curves
-            start = {x:(curve.start.x+x)*scale, y:(curve.start.y+y)*scale}
-            end = {x:(curve.end.x+x)*scale, y:(curve.end.y+y)*scale}
-            control = {x:(curve.control.x+x)*scale, y:(curve.control.y+y)*scale}
-            arcTo start, end, control, graphics
+            start = {x:curve.start.x, y:curve.start.y}
+            end = {x:curve.end.x, y:curve.end.y}
+            control = {x:curve.control.x, y:curve.control.y}
+            arcTo start, end, control, @
 
     getDelta = (p1, p2) ->
         Math.abs(p2.x - p1.x) + Math.abs(p2.y - p1.y)
@@ -38,21 +51,7 @@ module.exports = class WallLayer
         x: (1 - t) * (1 - t) * start.x + 2 * (1 - t) * t * control.x + t * t * end.x
         y: (1 - t) * (1 - t) * start.y + 2 * (1 - t) * t * control.y + t * t * end.y
 
-    @render: (corners, graphics, x, y, scale, color) ->
-        graphics.beginFill 0,0
-        graphics.lineStyle 10, color
-        for corner in corners
-            for edge1 in corner.edges
-                for edge2 in corner.edges
-                    if edge1 isnt edge2
-                        graphics.moveTo((edge1.getOther(corner).x + x) * scale, (edge1.getOther(corner).y+ y)*scale)
-                        WallLayer._setLineThickness edge1.thickness*scale, graphics, color
-                        graphics.lineTo((corner.x+x)*scale, (corner.y+y)*scale)
-                        WallLayer._setLineThickness edge2.thickness*scale, graphics, color
-                        graphics.lineTo((edge2.getOther(corner).x+x)*scale,(edge2.getOther(corner).y+y)*scale)
-        graphics
-
-    @_setLineThickness : (thickness, graphics, color) ->
+    setLineThickness : (thickness, graphics, color) ->
         if @lastThickness isnt thickness
             @lastThickness = thickness
             graphics.lineStyle @lastThickness, color
